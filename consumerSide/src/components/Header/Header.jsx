@@ -8,6 +8,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { IoGitCompareOutline } from "react-icons/io5";
 import { IoHeartOutline } from "react-icons/io5";
 import Tooltip from "@mui/material/Tooltip";
+import Navigation from "./Navigation/Navigation";
 
 const Header = () => {
   const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -21,7 +22,7 @@ const Header = () => {
 
   return (
     <>
-      <header>
+      <header className="bg-white">
         <div className="top-strip border-y-[1px] border-gray-200 py-2">
           <div className="container">
             <div className="flex items-center justify-between">
@@ -51,7 +52,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="header py-3">
+        <div className="header border-b-[1px] border-gray-200 py-4">
           <div className="container flex items-center justify-between">
             <div className="col1 w-[25%]">
               <Link to={"/"}>
@@ -108,6 +109,9 @@ const Header = () => {
               </ul>
             </div>
           </div>
+        </div>
+        <div>
+          <Navigation />
         </div>
       </header>
     </>
