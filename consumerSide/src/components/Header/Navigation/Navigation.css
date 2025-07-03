@@ -8,12 +8,14 @@
 
 .nav li .submenu {
     visibility: hidden;
+    z-index: 100;
 
 
 }
 
 .nav li .submenu button {
     font-size: 400 !important;
+
 }
 
 .nav li:hover .submenu {
