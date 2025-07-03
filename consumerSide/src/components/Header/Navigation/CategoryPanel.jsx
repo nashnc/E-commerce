@@ -40,7 +40,7 @@ const CategoryPanel = (props) => {
       // onClick={() => props.setIsOpenCategoryPanel(false)}
     >
       <h3 className="flex items-center justify-between p-3 text-[16px] font-[500]">
-        Shop By Categories{" "}
+        Shop By Categories
         <IoCloseSharp
           className="cursor-pointer text-[20px]"
           onClick={() => props.setIsOpenCategoryPanel(false)}
@@ -71,7 +71,6 @@ const CategoryPanel = (props) => {
         <ul className="w-full">
           {/* Fashion */}
           <li className="relative flex list-none flex-col items-center">
-            {" "}
             <Link to="/" className="w-full">
               <Button className="w-full !justify-start !px-3 !text-left !text-[rgba(0,0,0,0.7)]">
                 Fashion
@@ -91,11 +90,10 @@ const CategoryPanel = (props) => {
             {subMenuIndex === 0 && (
               <ul className="submenu w-full pl-3">
                 <li className="relative flex list-none flex-col items-center">
-                  {" "}
                   <Link to="/" className="w-full">
                     <Button className="w-full !justify-start !px-3 !text-left !text-[rgba(0,0,0,0.7)]">
                       apparel
-                    </Button>{" "}
+                    </Button>
                   </Link>
                   {innerSubMenuIndex === 0 ? (
                     <FiMinusSquare
@@ -111,7 +109,6 @@ const CategoryPanel = (props) => {
                   {innerSubMenuIndex === 0 && (
                     <ul className="inner_submenu w-full pl-3">
                       <li className="mb-1list-none items-center">
-                        {" "}
                         <Link
                           to="/"
                           className="link text-[14px]] w-full !justify-start !px-3 !text-left transition"
@@ -120,7 +117,6 @@ const CategoryPanel = (props) => {
                         </Link>
                       </li>
                       <li className="mb-1list-none items-center">
-                        {" "}
                         <Link
                           to="/"
                           className="link text-[14px]] w-full !justify-start !px-3 !text-left transition"
@@ -130,7 +126,6 @@ const CategoryPanel = (props) => {
                       </li>
 
                       <li className="mb-1list-none items-center">
-                        {" "}
                         <Link
                           to="/"
                           className="link text-[14px]] w-full !justify-start !px-3 !text-left transition"
@@ -139,7 +134,6 @@ const CategoryPanel = (props) => {
                         </Link>
                       </li>
                       <li className="mb-1list-none items-center">
-                        {" "}
                         <Link
                           to="/"
                           className="link text-[14px]] w-full !justify-start !px-3 !text-left transition"
@@ -156,7 +150,6 @@ const CategoryPanel = (props) => {
           {/* fashion */}
           {/* outerwear */}
           <li className="relative flex list-none flex-col items-center">
-            {" "}
             <Link to="/" className="w-full">
               <Button className="w-full !justify-start !px-3 !text-left !text-[rgba(0,0,0,0.7)]">
                 Outerwear
@@ -176,11 +169,10 @@ const CategoryPanel = (props) => {
             {subMenuIndex === 1 && (
               <ul className="submenu w-full pl-3">
                 <li className="relative flex list-none flex-col items-center">
-                  {" "}
                   <Link to="/" className="w-full">
                     <Button className="w-full !justify-start !px-3 !text-left !text-[rgba(0,0,0,0.7)]">
                       apparel
-                    </Button>{" "}
+                    </Button>
                   </Link>
                   {innerSubMenuIndex === 1 ? (
                     <FiMinusSquare
@@ -196,7 +188,6 @@ const CategoryPanel = (props) => {
                   {innerSubMenuIndex === 1 && (
                     <ul className="inner_submenu w-full pl-3">
                       <li className="mb-1list-none items-center">
-                        {" "}
                         <Link
                           to="/"
                           className="link text-[14px]] w-full !justify-start !px-3 !text-left transition"
@@ -205,7 +196,6 @@ const CategoryPanel = (props) => {
                         </Link>
                       </li>
                       <li className="mb-1list-none items-center">
-                        {" "}
                         <Link
                           to="/"
                           className="link text-[14px]] w-full !justify-start !px-3 !text-left transition"
@@ -215,7 +205,6 @@ const CategoryPanel = (props) => {
                       </li>
 
                       <li className="mb-1list-none items-center">
-                        {" "}
                         <Link
                           to="/"
                           className="link text-[14px]] w-full !justify-start !px-3 !text-left transition"
@@ -224,7 +213,6 @@ const CategoryPanel = (props) => {
                         </Link>
                       </li>
                       <li className="mb-1list-none items-center">
-                        {" "}
                         <Link
                           to="/"
                           className="link text-[14px]] w-full !justify-start !px-3 !text-left transition"

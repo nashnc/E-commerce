@@ -56,7 +56,6 @@ const Header = () => {
           <div className="container flex items-center justify-between">
             <div className="col1 w-[25%]">
               <Link to={"/"}>
-                {" "}
                 <img src="/logo.jpg" alt="logo" />
               </Link>
             </div>
@@ -68,7 +67,7 @@ const Header = () => {
                 <li className="list-none">
                   <Link to="/login" className="link font-[500] transition">
                     Login
-                  </Link>{" "}
+                  </Link>
                   /{"  "}
                   <Link to="/register" className="link font-[500] transition">
                     Signup
@@ -76,7 +75,6 @@ const Header = () => {
                 </li>
 
                 <li>
-                  {" "}
                   <Tooltip title="Compare" placement="bottom">
                     <IconButton aria-label="compare">
                       <StyledBadge badgeContent={4} color="secondary">
@@ -87,7 +85,6 @@ const Header = () => {
                 </li>
 
                 <li>
-                  {" "}
                   <Tooltip title="Cart" placement="bottom">
                     <IconButton aria-label="cart">
                       <StyledBadge badgeContent={4} color="secondary">
@@ -97,7 +94,6 @@ const Header = () => {
                   </Tooltip>
                 </li>
                 <li>
-                  {" "}
                   <Tooltip title="Favorite" placement="bottom">
                     <IconButton aria-label="favorite">
                       <StyledBadge badgeContent={4} color="secondary">

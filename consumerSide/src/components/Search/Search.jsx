@@ -7,7 +7,6 @@ const Search = () => {
   return (
     <>
       <div className="searchBox relative h-[50px] w-[100%] rounded-[5px] bg-[#e5e5e5]">
-        {" "}
         <input
           type="text"
           name=""

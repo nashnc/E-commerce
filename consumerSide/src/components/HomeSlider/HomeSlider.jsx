@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -17,9 +17,13 @@ const HomeSlider = () => {
       <div className="homeSlider py-4">
         <div className="container">
           <Swiper
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
             spaceBetween={10}
             navigation={true}
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             className="mySwiper"
           >
             <SwiperSlide>
