@@ -38,7 +38,12 @@ body {
 
 
 .link:hover {
-  color: #ff5252
+  color: #ff5252;
+  transition-property: all;
+  transition-timing-function: var(--default-transition-timing-function);
+  /* cubic-bezier(0.4, 0, 0.2, 1) */
+  transition-duration: var(--default-transition-duration);
+  /* 150ms */
 }
 
 .MuiBadge-badge {

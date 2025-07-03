@@ -5,6 +5,7 @@ import AdsBannerSlider from "../../components/AdsBannerSlider/AdsBannerSlider";
 import FreeShipping from "../../components/FreeShipping/FreeShipping";
 import LeftSection from "../../components/Sections/LeftSection";
 import RightSection from "../../components/Sections/RightSection";
+import ProductsSlider from "../../components/ProductsSlider";
 const Home = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const Home = () => {
             <LeftSection />
             <RightSection />
           </div>
+          <ProductsSlider items={6} />
         </div>
       </section>
 
