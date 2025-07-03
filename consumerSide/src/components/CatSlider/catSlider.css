@@ -1,0 +1,49 @@
+.homeCatSlider .swiper-button-next,
+.homeCatSlider .swiper-button-prev {
+
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+
+}
+
+.homeCatSlider .swiper-button-next::after,
+.homeCatSlider .swiper-button-prev::after {
+
+    font-size: 16px !important;
+
+}
+
+.homeCatSlider .swiper-button-next {
+    right: -10px !important
+}
+
+.homeCatSlider .swiper-button-prev {
+    left: -10px !important;
+}
+
+.homeCatSlider {
+    overflow: inherit !important;
+}
+
+.homeCatSlider .swiper-button-next:hover,
+.homeCatSlider .swiper-button-prev:hover {
+
+    background-color: #ff5252;
+
+}
+
+.homeCatSlider .swiper-button-next:hover:after,
+.homeCatSlider .swiper-button-prev:hover:after {
+
+
+    color: #fff
+}
+
+.homeCatSlider .item {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.homeCatSlider .item:hover img {
+    transform: scale(1.15);
+}
