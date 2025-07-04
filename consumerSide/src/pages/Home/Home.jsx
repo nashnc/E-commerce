@@ -27,6 +27,14 @@ const Home = () => {
           <AdsBannerSlider items={4} />
         </div>
       </section>
+
+      <section className="bg-white py-5 pt-0">
+        <div className="container">
+          <h2 className="text-[20px] font-[600]">Latest Products</h2>
+
+          <ProductsSlider items={6} />
+        </div>
+      </section>
       <br />
       <br />
       <br />
