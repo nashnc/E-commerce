@@ -7,6 +7,7 @@ import LeftSection from "../../components/Sections/LeftSection";
 import RightSection from "../../components/Sections/RightSection";
 import ProductSlider from "../../components/Sliders/ProductSlider/ProductSlider";
 import BlogSection from "../../components/BlogSection/BlogSection";
+import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <>
@@ -51,6 +52,7 @@ const Home = () => {
           <BlogSection />
         </div>
       </section>
+      <Footer />
       <br />
       <br />
       <br />
