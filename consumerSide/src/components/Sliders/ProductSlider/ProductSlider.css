@@ -1,0 +1,42 @@
+.ProductSlider .swiper-button-next,
+.ProductSlider .swiper-button-prev {
+
+    height: 45px;
+    width: 45px;
+    min-width: 45px;
+
+}
+
+.ProductSlider .swiper-button-next::after,
+.ProductSlider .swiper-button-prev::after {
+
+    font-size: 20px !important;
+    font-weight: 500;
+
+}
+
+.ProductSlider .swiper-button-next {
+    right: -10px !important
+}
+
+.ProductSlider .swiper-button-prev {
+    left: -10px !important;
+}
+
+.ProductSlider {
+    overflow: inherit !important;
+}
+
+.ProductSlider .swiper-button-next:hover,
+.ProductSlider .swiper-button-prev:hover {
+
+    background-color: #ff5252;
+
+}
+
+.ProductSlider .swiper-button-next:hover:after,
+.ProductSlider .swiper-button-prev:hover:after {
+
+
+    color: #fff
+}

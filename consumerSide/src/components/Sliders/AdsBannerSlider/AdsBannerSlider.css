@@ -1,0 +1,28 @@
+.smallBtn .swiper-button-next,
+.smallBtn .swiper-button-prev {
+
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+    top: 55% !important
+}
+
+.smallBtn .swiper-button-next::after,
+.smallBtn .swiper-button-prev::after {
+    font-size: 18px !important;
+    color: #000;
+}
+
+.smallBtn .swiper-button-next:hover,
+.smallBtn .swiper-button-prev:hover {
+
+    background-color: #ff5252;
+
+}
+
+.smallBtn .swiper-button-next:hover:after,
+.smallBtn .swiper-button-prev:hover:after {
+
+
+    color: #fff
+}

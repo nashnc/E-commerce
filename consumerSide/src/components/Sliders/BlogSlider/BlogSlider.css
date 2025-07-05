@@ -1,0 +1,22 @@
+.blogSlider .swiper-button-next,
+.blogSlider .swiper-button-prev {
+
+    height: 45px;
+    width: 45px;
+    min-width: 45px;
+
+}
+
+.blogSlider .swiper-button-next:hover,
+.blogSlider .swiper-button-prev:hover {
+
+    background-color: #ff5252;
+
+}
+
+.blogSlider .swiper-button-next:hover:after,
+.blogSlider .swiper-button-prev:hover:after {
+
+
+    color: #fff
+}

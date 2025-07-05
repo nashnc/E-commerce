@@ -1,23 +1,24 @@
 import React from "react";
-import HomeSlider from "../../components/HomeSlider/HomeSlider";
-import CatSlider from "../../components/CatSlider/CatSlider";
-import AdsBannerSlider from "../../components/AdsBannerSlider/AdsBannerSlider";
+import HomeSlider from "../../components/Sliders/HomeSlider/HomeSlider";
+import HomeCatSlider from "../../components/Sliders/HomeCatSlider/HomeCatSlider";
+import AdsBannerSlider from "../../components/Sliders/AdsBannerSlider/AdsBannerSlider";
 import FreeShipping from "../../components/FreeShipping/FreeShipping";
 import LeftSection from "../../components/Sections/LeftSection";
 import RightSection from "../../components/Sections/RightSection";
-import ProductsSlider from "../../components/ProductsSlider";
+import ProductSlider from "../../components/Sliders/ProductSlider/ProductSlider";
+import BlogSection from "../../components/BlogSection/BlogSection";
 const Home = () => {
   return (
     <>
       <HomeSlider />
-      <CatSlider />
+      <HomeCatSlider />
       <section className="bg-white py-8">
         <div className="container">
           <div className="flex items-center justify-between">
             <LeftSection />
             <RightSection />
           </div>
-          <ProductsSlider items={6} />
+          <ProductSlider items={6} />
         </div>
       </section>
 
@@ -32,7 +33,22 @@ const Home = () => {
         <div className="container">
           <h2 className="text-[20px] font-[600]">Latest Products</h2>
 
-          <ProductsSlider items={6} />
+          <ProductSlider items={6} />
+          <AdsBannerSlider items={3} />
+        </div>
+      </section>
+      <section className="bg-white py-5 pt-0">
+        <div className="container">
+          <h2 className="text-[20px] font-[600]">Featured Products</h2>
+
+          <ProductSlider items={6} />
+          <AdsBannerSlider items={3} />
+        </div>
+      </section>
+      <section className="blogSection bg-white py-5 pb-8 pt-0">
+        <div className="container">
+          <h2 className="mb-4 text-[20px] font-[600]">From The Blog</h2>
+          <BlogSection />
         </div>
       </section>
       <br />
