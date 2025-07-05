@@ -4,6 +4,9 @@ import { PiKeyReturn } from "react-icons/pi";
 import { BsWallet2 } from "react-icons/bs";
 import { LiaGiftSolid } from "react-icons/lia";
 import { BiSupport } from "react-icons/bi";
+import Part1 from "./Part1";
+import Part2 from "./Part2";
+import Part3 from "./Part3";
 
 const Footer = () => {
   return (
@@ -36,7 +39,20 @@ const Footer = () => {
             <p className="text-[12px] font-[500]">Contact us Anytime</p>
           </div>
         </div>
+        <br />
         <hr />
+
+        <div className="footer flex items-center py-12">
+          <div className="part1 w-[25%] border-r border-[rgba[0,0,0,0.2]]">
+            <Part1 />
+          </div>
+          <div className="part2 flex w-[40%] items-center pl-8">
+            <Part2 />
+          </div>
+          <div className="part3 flex w-[35%] flex-col pr-8">
+            <Part3 />
+          </div>
+        </div>
       </div>
     </footer>
   );
