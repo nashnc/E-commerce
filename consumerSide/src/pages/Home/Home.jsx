@@ -53,11 +53,6 @@ const Home = () => {
         </div>
       </section>
       <Footer />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </>
   );
 };

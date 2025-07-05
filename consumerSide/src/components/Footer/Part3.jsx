@@ -22,7 +22,7 @@ const Part3 = () => {
         />
         <Button className="btn-orange">SUBSCRIBE</Button>
         <FormControlLabel
-          control={<Checkbox defaultChecked />}
+          control={<Checkbox />}
           label="I agree to the terms and conditions and the privacy policy"
         />
       </form>
