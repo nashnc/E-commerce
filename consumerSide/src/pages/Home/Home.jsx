@@ -9,14 +9,41 @@ import ProductSlider from "../../components/Sliders/ProductSlider/ProductSlider"
 import BlogSection from "../../components/BlogSection/BlogSection";
 import Footer from "../../components/Footer/Footer";
 import HomeSliderV2 from "../../components/Sliders/HomeSliderV2/HomeSliderV2";
+import BannerBoxV2 from "../../components/Sliders/AdsBannerSlider/BannerBoxv2/BannerBoxV2";
 const Home = () => {
   return (
     <>
       {/* <HomeSlider /> */}
       <section className="py-6">
-        <div className="container flex items-center">
-          <div className="part1 w-[75%] overflow-hidden">
+        <div className="container flex gap-5">
+          <div className="part1 w-[70%] overflow-hidden">
             <HomeSliderV2 />
+          </div>
+          <div className="part2 flex w-[30%] flex-col items-center justify-between gap-5 overflow-hidden">
+            <BannerBoxV2
+              info="left"
+              image={
+                "https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/cms/sub-banner-1.jpg"
+              }
+              title={
+                <>
+                  Samsung Gear <br /> VR Camera
+                </>
+              }
+            />
+            <BannerBoxV2
+              info="right"
+              image={
+                "https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/cms/sub-banner-2.jpg"
+              }
+              title={
+                <>
+                  Marcel Dining
+                  <br />
+                  Room Chair
+                </>
+              }
+            />
           </div>
         </div>
       </section>
