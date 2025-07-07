@@ -8,10 +8,18 @@ import RightSection from "../../components/Sections/RightSection";
 import ProductSlider from "../../components/Sliders/ProductSlider/ProductSlider";
 import BlogSection from "../../components/BlogSection/BlogSection";
 import Footer from "../../components/Footer/Footer";
+import HomeSliderV2 from "../../components/Sliders/HomeSliderV2/HomeSliderV2";
 const Home = () => {
   return (
     <>
-      <HomeSlider />
+      {/* <HomeSlider /> */}
+      <section className="py-6">
+        <div className="container flex items-center">
+          <div className="part1 w-[75%] overflow-hidden">
+            <HomeSliderV2 />
+          </div>
+        </div>
+      </section>
       <HomeCatSlider />
       <section className="bg-white py-8">
         <div className="container">
@@ -22,14 +30,12 @@ const Home = () => {
           <ProductSlider items={6} />
         </div>
       </section>
-
       <section className="bg-white py-16">
         <div className="container">
           <FreeShipping />
           <AdsBannerSlider items={4} />
         </div>
       </section>
-
       <section className="bg-white py-5 pt-0">
         <div className="container">
           <h2 className="text-[20px] font-[600]">Latest Products</h2>

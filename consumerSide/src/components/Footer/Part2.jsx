@@ -5,7 +5,6 @@ const Part2 = () => {
   return (
     <>
       <div className="part2_col1 w-[50%]">
-        {" "}
         <h2 className="mb-4 text-[18px] font-[600]">Products</h2>
         <ul className="list">
           <li className="mb-2 w-full list-none text-[14px]">
@@ -41,7 +40,6 @@ const Part2 = () => {
         </ul>
       </div>
       <div className="part2_col2 w-[50%]">
-        {" "}
         <h2 className="mb-4 text-[18px] font-[600]">Our company</h2>
         <ul className="list">
           <li className="mb-2 w-full list-none text-[14px]">

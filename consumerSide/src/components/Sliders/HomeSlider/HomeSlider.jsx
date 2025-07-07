@@ -21,6 +21,7 @@ const HomeSlider = () => {
               delay: 2500,
               disableOnInteraction: false,
             }}
+            loop={true}
             spaceBetween={10}
             navigation={true}
             modules={[Navigation, Autoplay]}
