@@ -1,15 +1,15 @@
 import React from "react";
-import HomeSlider from "../../components/Sliders/HomeSlider/HomeSlider";
 import HomeCatSlider from "../../components/Sliders/HomeCatSlider/HomeCatSlider";
-import AdsBannerSlider from "../../components/Sliders/AdsBannerSlider/AdsBannerSlider";
+import AdsBannerSliderV2 from "../../components/Sliders/AdsBannerSliderV2/AdsBannerSliderV2";
 import FreeShipping from "../../components/FreeShipping/FreeShipping";
 import LeftSection from "../../components/Sections/LeftSection";
 import RightSection from "../../components/Sections/RightSection";
 import ProductSlider from "../../components/Sliders/ProductSlider/ProductSlider";
 import BlogSection from "../../components/BlogSection/BlogSection";
-import Footer from "../../components/Footer/Footer";
 import HomeSliderV2 from "../../components/Sliders/HomeSliderV2/HomeSliderV2";
-import BannerBoxV2 from "../../components/Sliders/AdsBannerSlider/BannerBoxv2/BannerBoxV2";
+import BannerBoxV2 from "../../components/Sliders/AdsBannerSliderV2/BannerBoxV2/BannerBoxV2";
+
+//
 const Home = () => {
   return (
     <>
@@ -30,6 +30,7 @@ const Home = () => {
                   Samsung Gear <br /> VR Camera
                 </>
               }
+              price="$129.00"
             />
             <BannerBoxV2
               info="right"
@@ -43,6 +44,7 @@ const Home = () => {
                   Room Chair
                 </>
               }
+              price="$129.00"
             />
           </div>
         </div>
@@ -60,7 +62,7 @@ const Home = () => {
       <section className="bg-white py-16">
         <div className="container">
           <FreeShipping />
-          <AdsBannerSlider items={4} />
+          <AdsBannerSliderV2 items={4} />
         </div>
       </section>
       <section className="bg-white py-5 pt-0">
@@ -68,7 +70,7 @@ const Home = () => {
           <h2 className="text-[20px] font-[600]">Latest Products</h2>
 
           <ProductSlider items={6} />
-          <AdsBannerSlider items={3} />
+          {/* <AdsBannerSlider items={3} />  */}
         </div>
       </section>
       <section className="bg-white py-5 pt-0">
@@ -76,7 +78,7 @@ const Home = () => {
           <h2 className="text-[20px] font-[600]">Featured Products</h2>
 
           <ProductSlider items={6} />
-          <AdsBannerSlider items={3} />
+          {/* <AdsBannerSlider items={3} /> */}
         </div>
       </section>
       <section className="blogSection bg-white py-5 pb-8 pt-0">
@@ -85,7 +87,6 @@ const Home = () => {
           <BlogSection />
         </div>
       </section>
-      <Footer />
     </>
   );
 };

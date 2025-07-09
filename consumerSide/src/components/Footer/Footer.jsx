@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div className="bottomStrip border-t border-black bg-white py-3 ">
+      <div className="bottomStrip border-t border-black bg-white py-3">
         <BottomStrip />
       </div>
     </>
