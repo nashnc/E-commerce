@@ -10,8 +10,7 @@ footer form input::placeholder {
     font-size: 14px !important;
 }
 
-.css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
-.css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+.css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root.Mui-checked {
     color: #ff5252 !important;
 }
 
