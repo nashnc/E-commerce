@@ -1,0 +1,8 @@
+.MuiPaginationItem-root.Mui-selected {
+    background-color: #ff5252 !important;
+    color: #fff !important;
+}
+
+.MuiPaginationItem-root:hover {
+    color: #ff5252 !important;
+}

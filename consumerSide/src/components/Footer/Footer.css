@@ -5,7 +5,7 @@
     font-size: 16px !important;
     padding: 7px 20px !important;
 }
-
+.btn-orange:hover { background-color: #171717 !important;}
 footer form input::placeholder {
     font-size: 14px !important;
 }
