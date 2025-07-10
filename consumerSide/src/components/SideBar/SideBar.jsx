@@ -5,6 +5,7 @@ import ShopByCategory from "./ShopBy/ShopByCategory";
 import ShopByAvailability from "./ShopBy/ShopByAvailability";
 import ShopBySize from "./ShopBy/ShopBySize";
 import ShopByRange from "./ShopBy/ShopByRange";
+import ShopByRating from "./ShopBy/ShopByRating";
 
 const SideBar = () => {
      return (
@@ -21,6 +22,9 @@ const SideBar = () => {
                     </div>
                     <div className="box">
                          <ShopByRange />
+                    </div>
+                    <div className="box">
+                         <ShopByRating />
                     </div>
                </aside>
           </>

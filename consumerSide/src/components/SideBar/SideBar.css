@@ -27,3 +27,18 @@
 .ReactCollapse--collapse {
     transition: height 500ms;
 }
+
+
+.range-slider .range-slider__thumb {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.range-slider {
+    height: 3px !important;
+}
+
+.range-slider .range-slider__range,
+.range-slider .range-slider__thumb {
+    background-color: #ff5252 !important;
+}
