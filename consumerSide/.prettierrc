@@ -1,7 +1,14 @@
 {
-  "tabWidth": 5,
-  "useTabs": false,
-  "plugins": [
-    "prettier-plugin-tailwindcss"
+     "tabWidth": 5,
+     "useTabs": false,
+     "plugins": [
+          "prettier-plugin-tailwindcss",
+          "@trivago/prettier-plugin-sort-imports",
+          "prettier-plugin-css-order",
+          "prettier-plugin-organize-attributes"
+     ],
 
-  ]}
+     "attributeGroups": ["^(id|name)$", "^className$", "$DEFAULT", "^aria-"],
+     "attributeSort": "ASC",
+     "attributeIgnoreCase": true
+}

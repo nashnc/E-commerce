@@ -77,7 +77,7 @@ const ProductItemListView = () => {
                          </div>
                          <Button className="btn-orange !mt-3 flex gap-2">
                               <IoCartOutline className="text-[20px]" /> Add to
-                              Cart{" "}
+                              Cart
                          </Button>
                     </div>
                </div>

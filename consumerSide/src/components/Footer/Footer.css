@@ -1,8 +1,8 @@
 .btn-orange {
     background-color: #ff5252 !important;
     color: #fff !important;
-    font-weight: 500 !important;
     font-size: 16px !important;
+    font-weight: 500 !important;
     padding: 7px 20px !important;
 }
 .btn-orange:hover { background-color: #171717 !important;}
