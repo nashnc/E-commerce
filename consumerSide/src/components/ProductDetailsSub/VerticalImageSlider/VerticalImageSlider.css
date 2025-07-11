@@ -1,0 +1,61 @@
+.productSliderThumbs .swiper-slide {
+    height: auto !important;
+}
+
+.productSliderThumbs .swiper-button-next {
+    bottom: 0px !important;
+    top: inherit !important;
+    right: inherit !important;
+    width: 100% !important;
+    height: 30px !important;
+    border-radius: 0px !important;
+}
+
+.productSliderThumbs .swiper-button-prev {
+    bottom: inherit !important;
+    top: 20px !important;
+    left: inherit !important;
+    width: 100% !important;
+    height: 30px !important;
+    border-radius: 0px !important;
+
+
+}
+
+.productSliderThumbs .swiper-button-next:after {
+    transform: rotate(90deg);
+}
+
+.productSliderThumbs .swiper-button-prev:after {
+    transform: rotate(90deg);
+}
+
+.productSliderThumbs .swiper-button-next:hover,
+.productSliderThumbs .swiper-button-prev:hover {
+
+    background-color: #ff5252;
+}
+
+.productSliderThumbs .swiper-button-next:hover:after,
+.productSliderThumbs .swiper-button-prev:hover:after {
+
+
+    color: #fff
+}
+
+
+
+.productSliderThumbs .swiper-button-next:after,
+.productSliderThumbs .swiper-button-prev:after {
+
+
+    color: #000000;
+}
+
+.productSliderThumbs .swiper-button-next::after,
+.productSliderThumbs .swiper-button-prev::after {
+
+    font-size: 20px !important;
+    font-weight: 500;
+
+}

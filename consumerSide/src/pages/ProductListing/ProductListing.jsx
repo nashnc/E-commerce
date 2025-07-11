@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SideBar from "../../components/SideBar/SideBar";
-import BreadCrumbs from "../../components/SideBar/BreadCrumbs";
+import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
 import ProductItem from "../../components/Sliders/ProductSlider/ProductItem/ProductItem";
 import ProductItemListView from "../../components/Sliders/ProductSlider/ProductItemListView/ProductItemListView";
 import { Button } from "@mui/material";
@@ -14,11 +14,17 @@ import ProductPagination from "../../components/ProductPagination/ProductPaginat
 const ProductListing = () => {
      const [isItemView, setIsItemView] = useState("grid");
      console.log(isItemView);
+
+     const crumbs = [
+          { title: "Home", path: "/" },
+          { title: "Fashion", path: "" },
+     ];
+
      return (
           <>
                <section className="py-5 pb-0">
                     <div className="container">
-                         <BreadCrumbs />
+                         <BreadCrumbs crumbs={crumbs} />
                     </div>
                     <div className="mt-4 bg-white p-2">
                          <div className="container flex gap-3">
