@@ -1,16 +1,14 @@
+import React, { useRef, useState } from "react";
 import InnerImageZoom from "react-inner-image-zoom";
 import "react-inner-image-zoom/lib/styles.min.css";
-
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-
 // import required modules
 import { Navigation, Pagination } from "swiper/modules";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import './ImageZoomSlider.css'
 
 const ImageZoomSlider = ({ selectedIndex, sliderRef }) => {
      const images = [

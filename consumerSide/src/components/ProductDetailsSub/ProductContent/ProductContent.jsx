@@ -4,6 +4,8 @@ import "./ProductContent.css";
 import { Button } from "@mui/material";
 import React, { useState } from "react";
 import { IoCartOutline } from "react-icons/io5";
+import { IoHeartOutline } from "react-icons/io5";
+import { IoGitCompareOutline } from "react-icons/io5";
 
 const ProductContent = () => {
      const [productActionIndex, setProductActionIndex] = useState("null");
@@ -94,10 +96,10 @@ const ProductContent = () => {
                                    </div>
                               </div>
                          </div>
-                         <p className="text-[14px] mt-4 mb-2 ">
+                         <p className="text-[14px] mt-4  ">
                               Free Shipping (Est. Delivery Time 2-3 Days)
                          </p>
-                         <div className="quantityBoxWrapper flex items-center gap-4 mt-4">
+                         <div className="quantityBoxWrapper flex items-center gap-4 mb-3 mt-4">
                               <div className=" w-[80px] ">
                                    <QuantityBox />
                               </div>
@@ -105,6 +107,17 @@ const ProductContent = () => {
                                    <IoCartOutline className="text-[22px]" /> Add
                                    to Cart
                               </Button>
+                         </div>
+
+                         <div className="flex items-center mt-4 gap-4 ">
+                              <p className="flex items-center text-[16px] font-[500] link cursor-pointer gap-3">
+                                   <IoHeartOutline className="text-[20px]" />{" "}
+                                   Add to Wishlist{" "}
+                              </p>
+                              <p className="flex items-center text-[16px] link font-[500] cursor-pointer gap-3">
+                                   <IoGitCompareOutline className="text-[20px]" />{" "}
+                                   Add to Compare{" "}
+                              </p>
                          </div>
                     </div>
                </div>
