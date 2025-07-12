@@ -68,7 +68,8 @@ const ProductItemListView = () => {
                               Has Embroidered detail The saree comes with an
                               unstitched blouse piece
                          </p>
-                         <ProductItemRating />
+                         <ProductItemRating score="4"                                              sizeOf="small"
+ />
                          <div className="flex items-center gap-4">
                               <span className="oldPrice text-[14px] font-[400] text-[rgba(0,0,0,0.5)] line-through">
                                    $58.00
