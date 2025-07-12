@@ -1,4 +1,5 @@
 import BreadCrumbs from "../components/BreadCrumbs/BreadCrumbs";
+import AdditionalDetailsOfProducts from "../components/ProductDetailsSub/AdditionalDetailsOfProducts/AdditionalDetailsOfProducts";
 import ProductContent from "../components/ProductDetailsSub/ProductContent/ProductContent";
 import ProductZoom from "../components/ProductDetailsSub/ProductZoom/ProductZoom";
 import React from "react";
@@ -26,6 +27,9 @@ const ProductDetails = () => {
                          <div className="productContentContainer w-[60%]">
                               <ProductContent />
                          </div>
+                    </div>
+                    <div className="container pt-10">
+                         <AdditionalDetailsOfProducts />
                     </div>
                </section>
           </>
