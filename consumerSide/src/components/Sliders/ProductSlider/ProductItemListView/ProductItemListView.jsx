@@ -1,14 +1,13 @@
-import React from "react";
-import "./ProductItemListView.css";
-import { Link } from "react-router-dom";
 import ProductItemRating from "../ProductItemRating";
-
+import "./ProductItemListView.css";
 import { Button } from "@mui/material";
+import Tooltip from "@mui/material/Tooltip";
+import React from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { IoGitCompareOutline } from "react-icons/io5";
-import { MdZoomOutMap } from "react-icons/md";
-import Tooltip from "@mui/material/Tooltip";
 import { IoCartOutline } from "react-icons/io5";
+import { MdZoomOutMap } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const ProductItemListView = () => {
      return (
@@ -52,7 +51,10 @@ const ProductItemListView = () => {
                     </div>
                     <div className="info flex w-[75%] flex-col items-start p-3 px-8 py-4">
                          <Link to="/" className="link">
-                              <h6 className="text-[15px]"> Deel band</h6>
+                              <h6 className="text-[15px] font-[400]">
+                                   {" "}
+                                   Deel band
+                              </h6>
                          </Link>
                          <h3 className="title mb-3 mt-3 text-[18px] font-[500]">
                               <Link to="/" className="link">
