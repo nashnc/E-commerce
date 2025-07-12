@@ -3,6 +3,7 @@ import React from "react";
 const AdditionalDetailsProductDetails = () => {
      return (
           <>
+               <div className="shadow-md w-full p-5  rounded-md">
                <div className="productDetails">
                     <div className="relative overflow-x-auto">
                          <table className="w-full text-sm text-left rtl:text-right font- text-gray-500">
@@ -147,7 +148,8 @@ const AdditionalDetailsProductDetails = () => {
                               </tbody>
                          </table>
                     </div>
-               </div>
+                    </div>
+                    </div>
           </>
      );
 };
