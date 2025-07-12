@@ -29,7 +29,7 @@ const AdditionalDetailsOfProducts = () => {
                          Reviews (5)
                     </h3>
                </div>
-               <div className="shadow-md w-full p-5  rounded-md">
+               <div className="additionalProductsDetailTab">
                     {activeTab === 0 && <AdditionalDetailsProductDescription />}
 
                     {activeTab === 1 && <AdditionalDetailsProductDetails />}
