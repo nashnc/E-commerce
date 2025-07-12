@@ -1,13 +1,13 @@
-import React from "react";
-import "./ProductItem.css";
-import { Link } from "react-router-dom";
 import ProductItemRating from "../ProductItemRating";
-
+import "./ProductItem.css";
 import { Button } from "@mui/material";
+import Tooltip from "@mui/material/Tooltip";
+import React from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { IoGitCompareOutline } from "react-icons/io5";
 import { MdZoomOutMap } from "react-icons/md";
-import Tooltip from "@mui/material/Tooltip";
+import { Link } from "react-router-dom";
+
 const ProductItem = () => {
      return (
           <>
@@ -50,7 +50,10 @@ const ProductItem = () => {
                     </div>
                     <div className="info p-3 py-4">
                          <Link to="/" className="link">
-                              <h6 className=" font-[400] text-[13px]"> Deel band</h6>
+                              <h6 className=" font-[400] text-[13px]">
+                                   {" "}
+                                   Deel band
+                              </h6>
                          </Link>
                          <h3 className="title mb-1 mt-2 text-[16px] font-[500]">
                               <Link to="/" className="link">
@@ -58,7 +61,7 @@ const ProductItem = () => {
                                    Dupatta Set
                               </Link>
                          </h3>
-                         <ProductItemRating />
+                         <ProductItemRating score="2" sizeOf="small" />
 
                          <div className="flex items-center gap-4">
                               <span className="oldPrice text-[14px] font-[400] text-[rgba(0,0,0,0.5)] line-through">
