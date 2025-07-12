@@ -25,7 +25,7 @@ const ProductContent = () => {
                                         Jacket
                                    </span>
                               </p>
-                              <ProductItemRating />
+                              <ProductItemRating score="3" sizeOf="small" />
 
                               <p className="cursor-pointer select-none text-[13px]">
                                    Reviews (5)
@@ -96,7 +96,7 @@ const ProductContent = () => {
                                    </div>
                               </div>
                          </div>
-                         <p className="text-[14px] mt-4  ">
+                         <p className="text-[14px] mt-5 mb-2 text-[#000]  ">
                               Free Shipping (Est. Delivery Time 2-3 Days)
                          </p>
                          <div className="quantityBoxWrapper flex items-center gap-4 mb-3 mt-4">
