@@ -1,5 +1,6 @@
 import "./App.css";
 import ProductDetails from "./ProductDetails/ProductDetails";
+import CartSlide from "./components/CartSlide/CartSlide";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import ShowProductDetailsModal from "./components/ShowProductDetailsModal/ShowProductDetailsModal";
@@ -18,7 +19,13 @@ function App() {
   const handleCloseProductDetailsModal = () => {
     setOpenProductDetailsModal(false);
   };
-  const values = { setOpenProductDetailsModal };
+  const [openCartSlide, setOpenCartSlide] = useState(false);
+
+  const toggleCartSlide = (newOpen) => () => {
+    setOpenCartSlide(newOpen);
+  };
+
+  const values = { setOpenProductDetailsModal, setOpenCartSlide };
   return (
     <>
       <BrowserRouter>
@@ -28,15 +35,16 @@ function App() {
             <Route path={"/"} exact={true} element={<Home />} />
             <Route path={"/register"} exact={true} element={<Register />} />
             <Route path={"/login"} exact={true} element={<Login />} />
-            <Route path={"/items"} exact={true} element={<ProductListing />} />
+            <Route path={"/product"} exact={true} element={<ProductListing />} />
             <Route
-              path={"/seeitems/:id"}
+              path={"/product/:id"}
               exact={true}
               element={<ProductDetails />}
             />
           </Routes>
           <Footer />
-        </MyContext.Provider>
+      </MyContext.Provider>
+      <CartSlide open={openCartSlide} toggleCart={toggleCartSlide} />
       </BrowserRouter>
       <ShowProductDetailsModal
         open={openProductDetailsModal}
