@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { MyContext } from "../../App";
 import Search from "../Search/Search";
+import Navigation from "./Navigation/Navigation";
 import Badge from "@mui/material/Badge";
-
-import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
+import { styled } from "@mui/material/styles";
+import { useContext } from "react";
 import { IoCartOutline } from "react-icons/io5";
 import { IoGitCompareOutline } from "react-icons/io5";
 import { IoHeartOutline } from "react-icons/io5";
-import Tooltip from "@mui/material/Tooltip";
-import Navigation from "./Navigation/Navigation";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -19,7 +20,7 @@ const Header = () => {
       padding: "0 4px",
     },
   }));
-
+  const context = useContext(MyContext);
   return (
     <>
       <header className="bg-white">
@@ -86,7 +87,10 @@ const Header = () => {
 
                 <li>
                   <Tooltip title="Cart" placement="bottom">
-                    <IconButton aria-label="cart">
+                    <IconButton
+                      onClick={() => context.setOpenCartSlide(true)}
+                      aria-label="cart"
+                    >
                       <StyledBadge badgeContent={4} color="secondary">
                         <IoCartOutline />
                       </StyledBadge>
