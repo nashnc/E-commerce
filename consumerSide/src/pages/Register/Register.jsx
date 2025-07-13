@@ -17,14 +17,14 @@ const Register = () => {
             <h3 className="text-center text-[18px] text-black">
               Register with a new account
             </h3>
-            <form action="" className="w-full mt-5">
+            <form action="" className="w-full  mt-5">
               <div className="formGroup w-full mb-5">
                 <TextField
                   type="text"
                   id="name"
-                  label="EFull Name *"
+                  label="Full Name *"
                   variant="outlined"
-                  className="w-full"
+                  className="w-full !mb-5"
                 />
                 <TextField
                   type="email"
