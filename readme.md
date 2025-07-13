@@ -1,6 +1,6 @@
 # consumerSide Directory Structure
 
-```plaintext
+```plaintext 
 consumerSide/
 ├── .gitignore
 ├── .prettierrc
@@ -38,6 +38,11 @@ consumerSide/
 │   │   │   └── BlogSection.jsx
 │   │   ├── BreadCrumbs/
 │   │   │   └── BreadCrumbs.jsx
+│   │   ├── CartSlide/
+│   │   │   ├── CartBottomInfo.jsx
+│   │   │   ├── CartItem.jsx
+│   │   │   ├── CartSlide.css
+│   │   │   └── CartSlide.jsx
 │   │   ├── CategoryCollapse/
 │   │   │   └── CategoryCollapse.jsx
 │   │   ├── Footer/
@@ -69,80 +74,7 @@ consumerSide/
 │   │   │   ├── ProductContent/
 │   │   │   │   ├── ProductContent.css
 │   │   │   │   └── ProductContent.jsx
-│   │   │   ├── ProductZoom/
-│   │   │   │   └── ProductZoom.jsx
-│   │   │   └── VerticalImageSlider/
-│   │   │       ├── VerticalImageSlider.css
-│   │   │       └── VerticalImageSlider.jsx
-│   │   ├── ProductPagination/
-│   │   │   ├── ProductPagination.css
-│   │   │   └── ProductPagination.jsx
-│   │   ├── ProdutscSortBy/
-│   │   │   └── ProductsSortBy.jsx
-│   │   ├── QuanitiyBox/
-│   │   │   ├── QuantityBox.css
-│   │   │   └── QuantityBox.jsx
-│   │   ├── Search/
-│   │   │   ├── Search.css
-│   │   │   └── Search.jsx
-│   │   ├── Sections/
-│   │   │   ├── LeftSection.jsx
-│   │   │   ├── RightSection.jsx
-│   │   │   └── Section.css
-│   │   ├── ShowProductDetailsModal/
-│   │   │   ├── ShowProductDetailsModal.css
-│   │   │   └── ShowProductDetailsModal.jsx
-│   │   ├── SideBar/
-│   │   │   ├── SideBar.css
-│   │   │   ├── SideBar.jsx
-│   │   │   └── ShopBy/
-│   │   │       ├── ShopByAvailability.jsx
-│   │   │       ├── ShopByCategory.jsx
-│   │   │       ├── ShopByRange.jsx
-│   │   │       ├── ShopByRating.jsx
-│   │   │       └── ShopBySize.jsx
-│   │   ├── Sliders/
-│   │   │   ├── AdsBannerSlider/
-│   │   │   │   ├── AdsBannerSlider.css
-│   │   │   │   ├── AdsBannerSlider.jsx
-│   │   │   │   └── BannerBox/
-│   │   │   │       └── BannerBox.jsx
-│   │   │   ├── AdsBannerSliderV2/
-│   │   │   │   ├── AdsBannerSliderV2.css
-│   │   │   │   ├── AdsBannerSliderV2.jsx
-│   │   │   │   └── BannerBoxV2/
-│   │   │   │       ├── BannerBoxV2.css
-│   │   │   │       └── BannerBoxV2.jsx
-│   │   │   ├── BlogSlider/
-│   │   │   │   ├── BlogSlider.css
-│   │   │   │   ├── BlogSlider.jsx
-│   │   │   │   └── BlogItem/
-│   │   │   │       └── BlogItem.jsx
-│   │   │   ├── HomeCatSlider/
-│   │   │   │   ├── HomeCatSlider.css
-│   │   │   │   ├── HomeCatSlider.jsx
-│   │   │   ├── HomeSlider/
-│   │   │   │   ├── HomeSlider.css
-│   │   │   │   ├── HomeSlider.jsx
-│   │   │   ├── HomeSliderV2/
-│   │   │   │   ├── HomeSliderV2.css
-│   │   │   │   ├── HomeSliderV2.jsx
-│   │   │   ├── ProductSlider/
-│   │   │   │   ├── ProductItemRating.jsx
-│   │   │   │   ├── ProductSlider.css
-│   │   │   │   ├── ProductSlider.jsx
-│   │   │   │   ├── ProductItem/
-│   │   │   │   │   ├── ProductItem.css
-│   │   │   │   │   ├── ProductItem.jsx
-│   │   │   │   ├── ProductItemListView/
-│   │   │   │   │   ├── ProductItemListView.css
-│   │   │   │   │   └── ProductItemListView.jsx
-│   │   ├── pages/
-│   │   │   ├── Home/
-│   │   │   │   └── Home.jsx
-│   │   │   ├── ProductListing/
-│   │   │   │   ├── ProductListing.css
-│   │   │   │   └── ProductListing.jsx
-│   │   ├── ProductDetails/
-│   │   │   ├── ProductDetails.css
-│   │   │   └── ProductDetails.jsx
+│   │   │   ├── ProductZoom
+
+
+```
