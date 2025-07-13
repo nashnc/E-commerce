@@ -5,7 +5,6 @@ import "react-inner-image-zoom/lib/styles.min.css";
 import "swiper/css";
 import "swiper/css/navigation";
 // import required modules
-import { Navigation, Pagination } from "swiper/modules";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import './ImageZoomSlider.css'
