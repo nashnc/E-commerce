@@ -1,0 +1,37 @@
+.otp-container {
+    text-align: center;
+}
+
+.otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.otp-box {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.otp-box:focus {
+    border-color: #ff5252;
+}
+
+/* 
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} */
