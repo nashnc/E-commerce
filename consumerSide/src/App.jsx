@@ -11,6 +11,9 @@ import ProductListing from "./pages/ProductListing/ProductListing";
 import Register from "./pages/Register/Register";
 import { createContext, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Verification from "./pages/Verification/Verification";
+import toast, { Toaster } from "react-hot-toast";
+import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 
 const MyContext = createContext();
 
@@ -25,8 +28,16 @@ function App() {
   const toggleCartSlide = (newOpen) => () => {
     setOpenCartSlide(newOpen);
   };
+  const openAlertBox = (status, msg) => {
+    if (status === "success") {
+      toast.success(msg);
+    }
+    if (status === "error") {
+      toast.error(msg);
+    }
+  };
 
-  const values = { setOpenProductDetailsModal, setOpenCartSlide };
+  const values = { setOpenProductDetailsModal, setOpenCartSlide, openAlertBox };
   return (
     <>
       <BrowserRouter>
@@ -47,8 +58,11 @@ function App() {
               element={<ProductDetails />}
             />
             <Route path={"/cart"} exact={true} element={<Cart />} />
+            <Route path={"/verify"} exact={true} element={<Verification />} />
+            <Route path={"/forgot"} exact={true} element={<ForgotPassword />} />
           </Routes>
           <Footer />
+          <Toaster />
         </MyContext.Provider>
         <CartSlide open={openCartSlide} toggleCart={toggleCartSlide} />
       </BrowserRouter>
