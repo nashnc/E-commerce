@@ -100,23 +100,7 @@ const ForgotPassword = () => {
                   Change Password
                 </Button>
               </div>
-              <p className="text-center text-[14px] font-[600]">
-                Not registered?
-                <Link
-                  className="link cursor-pointer text-primary hover:underline"
-                  to="/register"
-                >
-                  Sign Up
-                </Link>
-              </p>
-              <p className="text-center font-[500]">
-                Or continue with social account
-              </p>
             </form>
-
-            <Button className="btn-lg flex w-full gap-3 !bg-[#f1f1f1] text-[18px] !capitalize !text-black">
-              <FcGoogle className="!text-[20px]" /> Sign in with Google
-            </Button>
           </div>
         </div>
       </section>
