@@ -4,12 +4,7 @@ p {
     margin-bottom: 10px;
 }
 
-h2,
-h3,
-h4,
-h5 {
-    font-weight: 600;
-}
+
 
 .reviewScroll::-webkit-scrollbar-thumb {
     background-color: #ccc !important;
