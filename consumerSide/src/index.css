@@ -16,6 +16,13 @@ body {
   overflow-x: hidden;
 }
 
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+}
+
 .container {
   width: 95%;
   margin: auto;
@@ -30,7 +37,7 @@ body {
   background-color: #ff5252;
 }
 
-::-webkit-scrollbar-track {
+::-webkit-bar-track {
   background-color: #fff;
 }
 
@@ -62,4 +69,13 @@ nav ul button:hover {
 
 nav ul button:hover {
   background: none;
+}
+
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #ff5252 !important;
+}
+
+
+.css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #ff5252 !important;
 }
