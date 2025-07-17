@@ -1,6 +1,8 @@
 .cartPanel .MuiPaper-root {
     width: 400px;
-}.cartScroll::-webkit-scrollbar-thumb {
+}
+
+.cartScroll::-webkit-scrollbar-thumb {
     background-color: #ccc !important;
 }
 
