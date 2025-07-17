@@ -14,6 +14,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Verification from "./pages/Verification/Verification";
 import toast, { Toaster } from "react-hot-toast";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
+import Checkout from "./pages/Checkout/Checkout";
 
 const MyContext = createContext();
 
@@ -47,6 +48,8 @@ function App() {
             <Route path={"/"} exact={true} element={<Home />} />
             <Route path={"/register"} exact={true} element={<Register />} />
             <Route path={"/login"} exact={true} element={<Login />} />
+            <Route path={"/verify"} exact={true} element={<Verification />} />
+            <Route path={"/forgot"} exact={true} element={<ForgotPassword />} />
             <Route
               path={"/product"}
               exact={true}
@@ -58,8 +61,7 @@ function App() {
               element={<ProductDetails />}
             />
             <Route path={"/cart"} exact={true} element={<Cart />} />
-            <Route path={"/verify"} exact={true} element={<Verification />} />
-            <Route path={"/forgot"} exact={true} element={<ForgotPassword />} />
+            <Route path={"/checkout"} exact={true} element={<Checkout />} />
           </Routes>
           <Footer />
           <Toaster />
