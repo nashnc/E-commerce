@@ -10,6 +10,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { IoGitCompareOutline } from "react-icons/io5";
 import { IoHeartOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import UserButton from "./UserButton/UserButton";
 
 const Header = () => {
   const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -60,52 +61,60 @@ const Header = () => {
                 <img src="/logo.jpg" alt="logo" />
               </Link>
             </div>
-            <div className="col2 w-[45%]">
+            <div className="col2 w-[40%]">
               <Search />
             </div>
-            <div className="col3 w-[30%] pl-7">
+            <div className="col3 w-[35%] pl-7">
               <ul className="flex w-full items-center justify-end gap-3 text-[16px]">
-                <li className="list-none">
-                  <Link to="/login" className="link font-[500] transition">
-                    Login
-                  </Link>
-                  /{"  "}
-                  <Link to="/register" className="link font-[500] transition">
-                    Signup
-                  </Link>
-                </li>
+                {context.isLogin === false ? (
+                  <li className="list-none">
+                    <Link to="/login" className="link font-[500] transition">
+                      Login
+                    </Link>
+                    /{"  "}
+                    <Link to="/register" className="link font-[500] transition">
+                      Signup
+                    </Link>
+                  </li>
+                ) : (
+                  <div className="userButton">
+                    <UserButton />
+                  </div>
+                )}
 
-                <li>
-                  <Tooltip title="Compare" placement="bottom">
-                    <IconButton aria-label="compare">
-                      <StyledBadge badgeContent={4} color="secondary">
-                        <IoGitCompareOutline />
-                      </StyledBadge>
-                    </IconButton>
-                  </Tooltip>
-                </li>
+                <>
+                  <li>
+                    <Tooltip title="Compare" placement="bottom">
+                      <IconButton aria-label="compare">
+                        <StyledBadge badgeContent={4} color="secondary">
+                          <IoGitCompareOutline />
+                        </StyledBadge>
+                      </IconButton>
+                    </Tooltip>
+                  </li>
 
-                <li>
-                  <Tooltip title="Cart" placement="bottom">
-                    <IconButton
-                      onClick={() => context.setOpenCartSlide(true)}
-                      aria-label="cart"
-                    >
-                      <StyledBadge badgeContent={4} color="secondary">
-                        <IoCartOutline />
-                      </StyledBadge>
-                    </IconButton>
-                  </Tooltip>
-                </li>
-                <li>
-                  <Tooltip title="Favorite" placement="bottom">
-                    <IconButton aria-label="favorite">
-                      <StyledBadge badgeContent={4} color="secondary">
-                        <IoHeartOutline />
-                      </StyledBadge>
-                    </IconButton>
-                  </Tooltip>
-                </li>
+                  <li>
+                    <Tooltip title="Cart" placement="bottom">
+                      <IconButton
+                        onClick={() => context.setOpenCartSlide(true)}
+                        aria-label="cart"
+                      >
+                        <StyledBadge badgeContent={4} color="secondary">
+                          <IoCartOutline />
+                        </StyledBadge>
+                      </IconButton>
+                    </Tooltip>
+                  </li>
+                  <li>
+                    <Tooltip title="Favorite" placement="bottom">
+                      <IconButton aria-label="favorite">
+                        <StyledBadge badgeContent={4} color="secondary">
+                          <IoHeartOutline />
+                        </StyledBadge>
+                      </IconButton>
+                    </Tooltip>
+                  </li>
+                </>
               </ul>
             </div>
           </div>
