@@ -9,7 +9,7 @@ const Cart = () => {
         <div className="flex w-[80%] max-w-[80%] gap-5">
           <div className="leftPart w-[70%]">
             <CartLeftSection />
-          </div>{" "}
+          </div>
           <div className="rightPart w-[30%]">
             <CartRightSection />
           </div>
