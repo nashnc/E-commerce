@@ -71,7 +71,8 @@ nav ul button:hover {
   background: none;
 }
 
-.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused,
+.thumbnail.css-1uent87-MuiButtonBase-root-MuiButton-root {
   color: #ff5252 !important;
 }
 
