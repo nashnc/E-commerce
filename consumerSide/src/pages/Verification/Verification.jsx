@@ -13,7 +13,7 @@ const Verification = () => {
             Verify OTP
           </h3>
           <p className="mt-0 text-center">
-            OTP sent to{" "}
+            OTP sent to
             <span className="font-bold text-primary">
               mernProject@testmail.com
             </span>
