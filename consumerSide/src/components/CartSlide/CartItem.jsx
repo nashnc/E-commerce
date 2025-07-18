@@ -23,10 +23,10 @@ const CartItem = () => {
           <p className="mb-2 mt-2 flex items-center gap-5">
             <span>
               Qty : <span>3</span>
-            </span>{" "}
+            </span>
             <span className="font-bold text-primary">
               Price : <span>$25.00</span>
-            </span>{" "}
+            </span>
           </p>
           <MdDeleteOutline className="link absolute right-[10px] top-[10px] cursor-pointer text-[20px] transition-all hover:scale-150" />
         </div>
