@@ -20,10 +20,10 @@ const CartLeftSectionCartItem = () => {
           />
         </div>
         <div className="info relative w-[85%]">
-          <IoCloseSharp className="absolute right-[0px] top-[0px] cursor-pointer text-[22px]" />{" "}
+          <IoCloseSharp className="absolute right-[0px] top-[0px] cursor-pointer text-[22px]" />
           <p className="text-[13px]">House of Pataudi </p>
           <h3 component={Link} to="/product/165" className="link text-[16px]">
-            Chevron Embroidered Straight Kurta{" "}
+            Chevron Embroidered Straight Kurta
           </h3>
           <ProductItemRating score="4" />
           <CartLeftMenu />
