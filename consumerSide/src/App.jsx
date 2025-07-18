@@ -15,10 +15,12 @@ import Verification from "./pages/Verification/Verification";
 import toast, { Toaster } from "react-hot-toast";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import Checkout from "./pages/Checkout/Checkout";
+import MyAccount from "./pages/MyAccount/MyAccount";
 
 const MyContext = createContext();
 
 function App() {
+  const [isLogin, setIsLogin] = useState(true);
   const [openProductDetailsModal, setOpenProductDetailsModal] = useState(false);
 
   const handleCloseProductDetailsModal = () => {
@@ -38,7 +40,13 @@ function App() {
     }
   };
 
-  const values = { setOpenProductDetailsModal, setOpenCartSlide, openAlertBox };
+  const values = {
+    setOpenProductDetailsModal,
+    setOpenCartSlide,
+    openAlertBox,
+    isLogin,
+    setIsLogin,
+  };
   return (
     <>
       <BrowserRouter>
@@ -50,6 +58,7 @@ function App() {
             <Route path={"/login"} exact={true} element={<Login />} />
             <Route path={"/verify"} exact={true} element={<Verification />} />
             <Route path={"/forgot"} exact={true} element={<ForgotPassword />} />
+            <Route path={"/account"} exact={true} element={<MyAccount />} />
             <Route
               path={"/product"}
               exact={true}
