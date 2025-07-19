@@ -1,6 +1,6 @@
 import { RiUploadCloudFill } from "react-icons/ri";
 import React from "react";
-import './MyAccountLeftTabs.css'
+import "./MyAccountLeftTabs.css";
 
 import MyAccountLeftTabs from "./MyAccountLeftTabs";
 
