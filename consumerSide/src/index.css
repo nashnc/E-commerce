@@ -23,6 +23,10 @@ h5 {
   font-weight: 600;
 }
 
+#sizeMenu .MuiButtonBase-root {
+  font-size: 12px !important;
+}
+
 .container {
   width: 95%;
   margin: auto;
