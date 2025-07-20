@@ -10,7 +10,7 @@ const MyList = () => {
           <div className="col1 w-[20%]">
             <MyAccountLeft />
           </div>
-          <div className="col2 w-[50%]">
+          <div className="col2 w-[80%]">
             <MyListLeftSection />
           </div>
         </div>
