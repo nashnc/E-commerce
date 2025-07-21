@@ -36,7 +36,7 @@ const MyListLeftSectionMyListItem = () => {
             </span>
             <span className="newPrice text-[14px] text-[#ff5252]">55% OFF</span>
           </div>
-          <Button className="btn-orange btn-sm">Add to cart</Button>{" "}
+          <Button className="btn-orange btn-sm">Add to cart</Button>
         </div>
       </div>
     </>
