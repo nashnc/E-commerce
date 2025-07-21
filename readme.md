@@ -1,3 +1,5 @@
+````
+
 consumerSide/
 └── src/
     ├── main.jsx
@@ -166,3 +168,6 @@ consumerSide/
     ├── ProductDetails/
     │   ├── ProductDetails.css
     │   └── ProductDetails.jsx
+
+
+````
