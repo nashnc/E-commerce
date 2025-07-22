@@ -1,3 +1,6 @@
+
+# File Structure of ConsumerSide
+
 ````
 
 consumerSide/
@@ -168,6 +171,42 @@ consumerSide/
     ├── ProductDetails/
     │   ├── ProductDetails.css
     │   └── ProductDetails.jsx
+
+
+````
+
+
+#  File Structure of Admin Side
+
+
+````
+
+adminPanel/
+└── src/
+├── App.css
+├── App.jsx
+├── index.css
+├── main.jsx
+├── assets/
+├── Components/
+│   ├── Badge/
+│   │   └── Badge.jsx
+│   ├── DashBoardBox/
+│   │   ├── DashBoardBox.jsx
+│   │   ├── DashBoardTable.jsx
+│   │   └── DashBoardWelcome.jsx
+│   ├── Header/
+│   │   ├── Header.css
+│   │   ├── Header.jsx
+│   │   └── HeaderAccountMenu.jsx
+│   ├── Navigations/
+│   │   └── Navigtions.jsx
+│   └── SideBar/
+│       └── SideBar.jsx
+└── Pages/
+└── DashBoard/
+├── DashBoard.css
+└── Dashboard.jsx
 
 
 ````
