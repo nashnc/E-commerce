@@ -28,7 +28,7 @@ const SideBar = () => {
 
   return (
     <>
-      <div className="sidebar fixed left-0 top-0 h-full w-[18%] border-r border-[rgba(0,0,0,0.1)] bg-[#f1f1f1] px-4 py-2">
+      <div className="sidebar fixed left-0 top-0 h-full w-[18%] border-r border-[rgba(0,0,0,0.1)] bg-[#fff] px-4 py-2">
         <div className="w-full py-2">
           <Link to={"/"}>
             <img src={image} alt="" className="w-[120px]" />
@@ -36,7 +36,11 @@ const SideBar = () => {
         </div>
         <ul>
           <li>
-            <Button className="flex !w-full !justify-start gap-3 !py-2 !text-[14px] !font-[600] !capitalize !text-[rgba(0,0,0,0.8)] hover:!bg-[#ccc]">
+            <Button
+              component={Link}
+              to="/"
+              className="flex !w-full !justify-start gap-3 !py-2 !text-[14px] !font-[600] !capitalize !text-[rgba(0,0,0,0.8)] hover:!bg-[#ccc]"
+            >
               <LuLayoutDashboard className="items-center !text-[20px] !font-[500]" />
               <p>Dashboard</p>
             </Button>
@@ -76,7 +80,11 @@ const SideBar = () => {
             </Collapse>
           </li>
           <li>
-            <Button className="flex !w-full !justify-start gap-3 !py-2 !text-[14px] !font-[600] !capitalize !text-[rgba(0,0,0,0.8)] hover:!bg-[#ccc]">
+            <Button
+              component={Link}
+              to="/users"
+              className="flex !w-full !justify-start gap-3 !py-2 !text-[14px] !font-[600] !capitalize !text-[rgba(0,0,0,0.8)] hover:!bg-[#ccc]"
+            >
               <LuUsersRound className="items-center !text-[20px] !font-[500]" />
               <p>Users</p>
             </Button>
@@ -97,7 +105,11 @@ const SideBar = () => {
             <Collapse isOpened={openMenu === 1}>
               <ul className="w-full">
                 <li className="w-full">
-                  <Button className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]">
+                  <Button
+                    component={Link}
+                    to="/product"
+                    className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]"
+                  >
                     <div className="flex h-[12px] w-[12px] items-center justify-center rounded-full bg-[rgba(0,0,0,0.1)]">
                       <div className="block h-[6px] w-[6px] rounded-full bg-[rgba(0,0,0,0.3)]"></div>
                     </div>
@@ -105,7 +117,11 @@ const SideBar = () => {
                   </Button>
                 </li>
                 <li className="w-full">
-                  <Button className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]">
+                  <Button
+                    component={Link}
+                    to="/product/new"
+                    className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]"
+                  >
                     <div className="flex h-[12px] w-[12px] items-center justify-center rounded-full bg-[rgba(0,0,0,0.1)]">
                       <div className="block h-[6px] w-[6px] rounded-full bg-[rgba(0,0,0,0.3)]"></div>
                     </div>
@@ -131,7 +147,11 @@ const SideBar = () => {
             <Collapse isOpened={openMenu === 2}>
               <ul className="w-full">
                 <li className="w-full">
-                  <Button className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]">
+                  <Button
+                    component={Link}
+                    to="/category"
+                    className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]"
+                  >
                     <div className="flex h-[12px] w-[12px] items-center justify-center rounded-full bg-[rgba(0,0,0,0.1)]">
                       <div className="block h-[6px] w-[6px] rounded-full bg-[rgba(0,0,0,0.3)]"></div>
                     </div>
@@ -139,7 +159,11 @@ const SideBar = () => {
                   </Button>
                 </li>
                 <li className="w-full">
-                  <Button className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]">
+                  <Button
+                    component={Link}
+                    to="/category/new"
+                    className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]"
+                  >
                     <div className="flex h-[12px] w-[12px] items-center justify-center rounded-full bg-[rgba(0,0,0,0.1)]">
                       <div className="block h-[6px] w-[6px] rounded-full bg-[rgba(0,0,0,0.3)]"></div>
                     </div>
@@ -147,7 +171,11 @@ const SideBar = () => {
                   </Button>
                 </li>
                 <li className="w-full">
-                  <Button className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]">
+                  <Button
+                    component={Link}
+                    to="/subcategory"
+                    className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]"
+                  >
                     <div className="flex h-[12px] w-[12px] items-center justify-center rounded-full bg-[rgba(0,0,0,0.1)]">
                       <div className="block h-[6px] w-[6px] rounded-full bg-[rgba(0,0,0,0.3)]"></div>
                     </div>
@@ -155,7 +183,11 @@ const SideBar = () => {
                   </Button>
                 </li>
                 <li className="w-full">
-                  <Button className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]">
+                  <Button
+                    component={Link}
+                    to="/subcategory/new"
+                    className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]"
+                  >
                     <div className="flex h-[12px] w-[12px] items-center justify-center rounded-full bg-[rgba(0,0,0,0.1)]">
                       <div className="block h-[6px] w-[6px] rounded-full bg-[rgba(0,0,0,0.3)]"></div>
                     </div>
