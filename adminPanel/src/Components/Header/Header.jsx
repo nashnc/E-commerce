@@ -11,7 +11,7 @@ const Header = () => {
   ];
   return (
     <>
-      <header className="h-autp flex w-full items-center justify-between bg-[#f1f1f1] py-3 pl-[19%] pr-10 shadow-md">
+      <header className="h-autp flex w-full items-center justify-between bg-[#fff] py-3 pl-[19%] pr-10 shadow-md">
         <div className="part1">
           <Button className="!h-[40px] !w-[40px] !min-w-[40px] !rounded-full !text-[rgba(0,0,0,0.8)]">
             <RiMenu2Line className="text-[20px] text-[rgba(0,0,0,0.8)]" />
