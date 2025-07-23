@@ -1,19 +1,31 @@
 import { Button } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import { RiMenu2Line } from "react-icons/ri";
 import Badge from "@mui/material/Badge";
 import { FaRegBell } from "react-icons/fa";
 import "./Header.css";
 import HeaderAccountMenu from "./HeaderAccountMenu";
+import { MyContext } from "../../App"; // Update this line
+
 const Header = () => {
-  const image = [
-    "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/aa/aab6771e4833fbc103aad66947080737c4be0278_full.jpg",
-  ];
+  const context = useContext(MyContext);
+
+  // Fix the typo in the onClick handler
+  const handleSidebarToggle = () =>
+    context.setSideBarIsOpen(!context.sideBarIsOpen);
+
+  // ... rest of the code
+
   return (
     <>
-      <header className="h-autp flex w-full items-center justify-between bg-[#fff] py-3 pl-[19%] pr-10 shadow-md">
+      <header
+        className={`flex h-auto w-full items-center justify-between bg-[#fff] py-3 transition-all duration-[1s] ${context.sideBarIsOpen ? "pl-[19%]" : "pl-[5%]"} pr-10 shadow-md`}
+      >
         <div className="part1">
-          <Button className="!h-[40px] !w-[40px] !min-w-[40px] !rounded-full !text-[rgba(0,0,0,0.8)]">
+          <Button
+            onClick={handleSidebarToggle}
+            className="!h-[40px] !w-[40px] !min-w-[40px] !rounded-full !text-[rgba(0,0,0,0.8)]"
+          >
             <RiMenu2Line className="text-[20px] text-[rgba(0,0,0,0.8)]" />
           </Button>
         </div>
