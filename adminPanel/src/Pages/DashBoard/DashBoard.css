@@ -6,3 +6,23 @@
 .dashBoardTable ::-webkit-scrollbar-thumb {
     background-color: #ccc;
 }
+
+.actionIcons svg:hover {
+    color: #3872fa !important;
+}
+
+.actionIcons div {
+    background-color: #fff !important;
+}
+
+
+.css-1l5xwdx-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    background-color: #3872fac4 !important;
+    color: #fff !important;
+    box-shadow: #ccc !important;
+}
+
+.css-1l5xwdx-MuiButtonBase-root-MuiPaginationItem-root:hover {
+    border: 1px solid #3872fa !important;
+
+}
