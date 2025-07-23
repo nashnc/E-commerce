@@ -252,6 +252,7 @@ const DashBoardTableRecent = () => {
           </div>
         </div>
       </div>
+      
     </>
   );
 };

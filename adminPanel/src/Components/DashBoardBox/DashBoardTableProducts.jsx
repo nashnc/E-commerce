@@ -37,7 +37,7 @@ const DashBoardTableProducts = () => {
     <>
       <div className="dashBoardTable mt-4 rounded-md bg-white pb-3 shadow-md">
         <div className="px-5 py-5">
-          <h3 className="text-[20px] font-[600]">Products Orders</h3>
+          <h3 className="text-[20px] font-[600]">Products</h3>
         </div>
         <div className="mb-3 flex w-full items-center justify-between pl-6 pr-5">
           <div className="col w-[20%]">
