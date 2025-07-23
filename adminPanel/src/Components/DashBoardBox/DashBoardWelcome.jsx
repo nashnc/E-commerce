@@ -18,15 +18,14 @@ const DashBoardWelcome = () => {
               once.
             </p>
             <br />
-            <Button className="btn-blue !capitalize">
+            <Button className="btn-blue gap-3 !capitalize">
               <FaPlus />
-              Add Product
+              <p className="mb-0"> Add Product</p>
             </Button>
           </div>
           <img src="/shop-illustration.png" alt="" className="w-[250px]" />
         </div>
       </section>
-      
     </>
   );
 };
