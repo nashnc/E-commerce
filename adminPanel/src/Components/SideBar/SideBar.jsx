@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { MdOutlineCategory } from "react-icons/md";
@@ -10,15 +10,20 @@ import { LuUsersRound } from "react-icons/lu";
 import { TfiLayoutMediaCenterAlt } from "react-icons/tfi";
 import { Collapse } from "react-collapse";
 import { FaAngleDown } from "react-icons/fa6";
+import { MyContext } from "../../App"; // Update this line
 
 const SideBar = () => {
+  const context = useContext(MyContext);
+
   const [openMenu, setOpenMenu] = useState(null);
 
   const showMenus = (index) => {
-    if (openMenu === index) {
-      setOpenMenu(null);
-    } else {
-      setOpenMenu(index);
+    if (context.sideBarIsOpen) {
+      if (openMenu === index) {
+        setOpenMenu(null);
+      } else {
+        setOpenMenu(index);
+      }
     }
   };
 
@@ -28,10 +33,16 @@ const SideBar = () => {
 
   return (
     <>
-      <div className="sidebar fixed left-0 top-0 h-full w-[18%] border-r border-[rgba(0,0,0,0.1)] bg-[#fff] px-4 py-2">
-        <div className="w-full py-2">
+      <div
+        className={`sidebar fixed left-0 top-0 h-full transition-all duration-[1s] ${context.sideBarIsOpen ? "w-[18%]" : "w-[4%] overflow-hidden"} border-r border-[rgba(0,0,0,0.1)] bg-[#fff] px-4 py-2`}
+      >
+        <div className="w-full py-2 pl-2">
           <Link to={"/"}>
-            <img src={image} alt="" className="w-[120px]" />
+            <img
+              src={image}
+              alt=""
+              className="w-[140px] min-w-[140px] object-cover"
+            />
           </Link>
         </div>
         <ul>
@@ -41,7 +52,7 @@ const SideBar = () => {
               to="/"
               className="flex !w-full !justify-start gap-3 !py-2 !text-[14px] !font-[600] !capitalize !text-[rgba(0,0,0,0.8)] hover:!bg-[#ccc]"
             >
-              <LuLayoutDashboard className="items-center !text-[20px] !font-[500]" />
+              <LuLayoutDashboard className="!min-w-[40px] items-center !text-[20px] !font-[500]" />
               <p>Dashboard</p>
             </Button>
           </li>
@@ -50,7 +61,7 @@ const SideBar = () => {
               onClick={() => showMenus(0)}
               className="flex !w-full !justify-start gap-3 !py-2 !text-[14px] !font-[600] !capitalize !text-[rgba(0,0,0,0.8)] hover:!bg-[#ccc]"
             >
-              <TfiLayoutMediaCenterAlt className="items-center !text-[20px] !font-[500]" />
+              <TfiLayoutMediaCenterAlt className="!min-w-[40px] items-center !text-[20px] !font-[500]" />
               <p>Home Slider</p>
               <div className="ml-auto flex h-[40px] w-[40px] min-w-[40px] items-center justify-center">
                 <FaAngleDown
@@ -85,7 +96,7 @@ const SideBar = () => {
               to="/users"
               className="flex !w-full !justify-start gap-3 !py-2 !text-[14px] !font-[600] !capitalize !text-[rgba(0,0,0,0.8)] hover:!bg-[#ccc]"
             >
-              <LuUsersRound className="items-center !text-[20px] !font-[500]" />
+              <LuUsersRound className="!min-w-[40px] items-center !text-[20px] !font-[500]" />
               <p>Users</p>
             </Button>
           </li>
@@ -94,7 +105,7 @@ const SideBar = () => {
               onClick={() => showMenus(1)}
               className="flex !w-full !justify-start gap-3 !py-2 !text-[14px] !font-[600] !capitalize !text-[rgba(0,0,0,0.8)] hover:!bg-[#ccc]"
             >
-              <GiBoxUnpacking className="items-center !text-[20px] !font-[500]" />
+              <GiBoxUnpacking className="!min-w-[40px] items-center !text-[20px] !font-[500]" />
               <p>Products</p>
               <div className="ml-auto flex h-[40px] w-[40px] min-w-[40px] items-center justify-center">
                 <FaAngleDown
@@ -136,7 +147,7 @@ const SideBar = () => {
               onClick={() => showMenus(2)}
               className="flex !w-full !justify-start gap-3 !py-2 !text-[14px] !font-[600] !capitalize !text-[rgba(0,0,0,0.8)] hover:!bg-[#ccc]"
             >
-              <MdOutlineCategory className="items-center !text-[20px] !font-[500]" />
+              <MdOutlineCategory className="!min-w-[40px] items-center !text-[20px] !font-[500]" />
               <p>Categories</p>
               <div className="ml-auto flex h-[40px] w-[40px] min-w-[40px] items-center justify-center">
                 <FaAngleDown
@@ -199,13 +210,13 @@ const SideBar = () => {
           </li>
           <li>
             <Button className="flex !w-full !justify-start gap-3 !py-2 !text-[14px] !font-[600] !capitalize !text-[rgba(0,0,0,0.8)] hover:!bg-[#ccc]">
-              <GiBoxTrap className="items-center !text-[20px] !font-[500]" />
+              <GiBoxTrap className="!min-w-[40px] items-center !text-[20px] !font-[500]" />
               <p>Orders</p>
             </Button>
           </li>
           <li>
             <Button className="flex !w-full !justify-start gap-3 !py-2 !text-[14px] !font-[600] !capitalize !text-[rgba(0,0,0,0.8)] hover:!bg-[#ccc]">
-              <LuLogOut className="items-center !text-[20px] !font-[500]" />
+              <LuLogOut className="!min-w-[40px] items-center !text-[20px] !font-[500]" />
               <p>Logout</p>
             </Button>
           </li>
