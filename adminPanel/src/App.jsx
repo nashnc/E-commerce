@@ -1,24 +1,33 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createContext, useState } from "react";
 
-import Navigtions from "./Components/Navigations/Navigtions";
+import Navigations from "./Components/Navigations/Navigations";
+
+export const MyContext = createContext();
 
 function App() {
+  const [sideBarIsOpen, setSideBarIsOpen] = useState(true);
+
   const router = createBrowserRouter([
     {
       path: "/",
       exact: true,
       element: (
         <>
-          <Navigtions />
+          <Navigations />
         </>
       ),
     },
   ]);
 
+  const values = { sideBarIsOpen, setSideBarIsOpen };
+
   return (
     <>
-      <RouterProvider router={router} />
+      <MyContext.Provider value={values}>
+        <RouterProvider router={router} />
+      </MyContext.Provider>
     </>
   );
 }
