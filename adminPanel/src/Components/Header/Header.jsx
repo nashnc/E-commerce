@@ -6,6 +6,7 @@ import { FaRegBell } from "react-icons/fa";
 import "./Header.css";
 import HeaderAccountMenu from "./HeaderAccountMenu";
 import { MyContext } from "../../App"; // Update this line
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const context = useContext(MyContext);
@@ -37,7 +38,19 @@ const Header = () => {
             <FaRegBell />
           </Badge>
           <div className="accountMenu">
-            <HeaderAccountMenu />
+            {context.isLogin === true ? (
+              <HeaderAccountMenu />
+            ) : (
+              <>
+                <Button
+                  component={Link}
+                  to="/login"
+                  className="btn-blue btn-sm"
+                >
+                  Login
+                </Button>
+              </>
+            )}
           </div>
         </div>
       </header>
