@@ -10,7 +10,7 @@ import { LuUsersRound } from "react-icons/lu";
 import { TfiLayoutMediaCenterAlt } from "react-icons/tfi";
 import { Collapse } from "react-collapse";
 import { FaAngleDown } from "react-icons/fa6";
-import { MyContext } from "../../App"; // Update this line
+import { MyContext } from "../../App"; // Update this l
 
 const SideBar = () => {
   const context = useContext(MyContext);
