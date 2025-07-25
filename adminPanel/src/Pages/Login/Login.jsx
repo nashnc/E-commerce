@@ -15,9 +15,9 @@ const Login = () => {
       />
       <LoginSignupNavs />
 
-      <LoginBox />
-      <LoginDivider />
-      <LoginForm />
+      <LoginBox show="login" />
+      <LoginDivider text="Login" />
+      <LoginForm show="login" />
     </>
   );
 };
