@@ -9,7 +9,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import { MyContext } from "../../App";
 
-const LoginForm = () => {
+const LoginForm = ({ show }) => {
   const context = useContext(MyContext);
 
   const [isShowPassword, setIsShowPassword] = useState(false);
@@ -21,6 +21,24 @@ const LoginForm = () => {
   const forgotPassword = () => {
     context.openAlertBox("success", "OTP Sent");
     history("/verify");
+  };
+
+  const optinFor = {
+    login: <>Remember Me</>,
+    signup: (
+      <>
+        <p>
+          By signing up you have agreed to our&nbsp;
+          <span component={Link} className="link font-[500]" to="/">
+            Terms
+          </span>
+          &nbsp;&&nbsp;
+          <span component={Link} className="link font-[500]" to="/">
+            Privacy Policy
+          </span>
+        </p>
+      </>
+    ),
   };
 
   return (
@@ -63,29 +81,50 @@ const LoginForm = () => {
                 )}
               </Button>
             </div>
-
             <div className="flex items-center justify-between">
-              <a
-                onClick={forgotPassword}
-                className="link cursor-pointer text-[14px] font-[500]"
-              >
-                Forgot Password
-              </a>
-              <FormControlLabel control={<Checkbox />} label="Remember Me" />
+              {show === "login" ? (
+                <a
+                  onClick={forgotPassword}
+                  className="link cursor-pointer text-[16px] font-[500]"
+                >
+                  Forgot Password?
+                </a>
+              ) : (
+                ""
+              )}
+              <FormControlLabel control={<Checkbox />} label={optinFor[show]} />
             </div>
 
             <div className="mb-3 mt-3 flex w-full items-center">
-              <Button className="btn-dark-border btn-lg w-full">Login</Button>
+              {show === "login" ? (
+                <Button className="btn-dark-border btn-lg w-full">Login</Button>
+              ) : (
+                <Button className="btn-dark-border btn-lg w-full !capitalize">
+                  Create Account
+                </Button>
+              )}
             </div>
-            <p className="text-center text-[14px] font-[600]">
-              Don’t have an account?
-              <Link
-                className="link cursor-pointer text-primary hover:underline"
-                to="/register"
-              >
-                Sign Up
-              </Link>
-            </p>
+            {show === "login" ? (
+              <p className="text-center text-[14px] font-[600]">
+                Don’t have an account?&nbsp;
+                <Link
+                  className="link cursor-pointer text-primary hover:underline"
+                  to="/signup"
+                >
+                  Sign Up
+                </Link>
+              </p>
+            ) : (
+              <p className="text-center text-[14px] font-[600]">
+                Already have an account?&nbsp;
+                <Link
+                  className="link cursor-pointer text-primary hover:underline"
+                  to="/login"
+                >
+                  Login
+                </Link>
+              </p>
+            )}
           </form>
         </div>
       </section>
