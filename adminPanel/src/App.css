@@ -63,5 +63,5 @@
 }
 
 .link:hover {
-    color: #3872fa;
+    color: #3872fa !important;
 }
