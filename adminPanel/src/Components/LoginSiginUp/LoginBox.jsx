@@ -3,20 +3,29 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { LoadingButton } from "@mui/lab";
 
-const LoginBox = () => {
+const loginWith = [
+  { icon: <FcGoogle />, text: "Google" },
+  { icon: <FaSquareFacebook color="#1877f2" />, text: "Facebook" },
+];
+
+const messages = {
+  login: (
+    <>
+      Welcome Back! <br />
+      Sign in with your credentials.
+    </>
+  ),
+  signup: (
+    <>
+      Join us today! Get special <br />
+      benefits and stay up-to-date.
+    </>
+  ),
+};
+
+const LoginBox = ({ show }) => {
   const image =
     "https://ecme-react.themenate.net/img/logo/logo-light-streamline.png";
-
-  const loginWith = [
-    {
-      icon: <FcGoogle />,
-      text: "Google",
-    },
-    {
-      icon: <FaSquareFacebook color="#1877f2" />,
-      text: "Facebook",
-    },
-  ];
 
   const [loadingIndex, setLoadingIndex] = useState(null);
 
@@ -40,14 +49,13 @@ const LoginBox = () => {
       </div>
 
       <h1 className="mt-4 text-center text-[35px] font-[800]">
-        Welcome Back! <br />
-        Sign in with your credentials.
+        {messages[show]}
       </h1>
 
       <div className="mt-4 flex items-end justify-center gap-3">
         {loginWith.map((method, index) => (
           <LoadingButton
-            key={index}
+            key={method.text}
             className="btn-dark-border !capitalize"
             startIcon={method.icon}
             onClick={() => handleLogin(index)}
