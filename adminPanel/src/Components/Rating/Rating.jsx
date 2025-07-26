@@ -1,9 +1,10 @@
-import Rating from "@mui/material/Rating";
+import MuiRating from "@mui/material/Rating";
 import React from "react";
-const Rating = () => {
+
+const Rating = (props) => {
   return (
     <>
-      <Rating
+      <MuiRating
         name="size-small"
         defaultValue={props.score}
         size={props.sizeOf}
