@@ -11,12 +11,13 @@ import { TfiLayoutMediaCenterAlt } from "react-icons/tfi";
 import { Collapse } from "react-collapse";
 import { FaAngleDown } from "react-icons/fa6";
 import { MyContext } from "../../App"; // Update this l
+import ProductsUploading from "../../Pages/Products/ProductsUploading";
 
 const SideBar = () => {
   const context = useContext(MyContext);
 
   const [openMenu, setOpenMenu] = useState(null);
-
+  
   const showMenus = (index) => {
     if (context.sideBarIsOpen) {
       if (openMenu === index) {
@@ -26,6 +27,10 @@ const SideBar = () => {
       }
     }
   };
+  const [dialogOpen, setDialogOpen] = React.useState(false);
+
+  const handleOpen = () => setDialogOpen(true);
+  const handleClose = () => setDialogOpen(false);
 
   const image = [
     "https://ecme-react.themenate.net/img/logo/logo-light-full.png",
@@ -129,8 +134,7 @@ const SideBar = () => {
                 </li>
                 <li className="w-full">
                   <Button
-                    component={Link}
-                    to="/product/new"
+                    onClick={handleOpen}
                     className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]"
                   >
                     <div className="flex h-[12px] w-[12px] items-center justify-center rounded-full bg-[rgba(0,0,0,0.1)]">
@@ -222,6 +226,10 @@ const SideBar = () => {
           </li>
         </ul>
       </div>
+      {/* component  */}
+      <ProductsUploading isOpen={dialogOpen} onClose={handleClose} />
+
+      {/* component */}
     </>
   );
 };
