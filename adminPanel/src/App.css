@@ -65,3 +65,22 @@
 .link:hover {
     color: #3872fa !important;
 }
+
+.css-35pwe3-MuiPaper-root-MuiAppBar-root {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: rgba(0, 0, 0, 0.7) !important;
+    font-weight: 600 !important;
+}
+
+.css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline,
+.css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline,
+.css-xrmkj5-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.7) !important
+}
+
+.css-l09ud3-MuiPaper-root-MuiDialog-paper {
+    background-color: #f1f1f1 !important;
+}
