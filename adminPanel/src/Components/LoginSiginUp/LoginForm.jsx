@@ -75,9 +75,9 @@ const LoginForm = ({ show }) => {
                 className="!absolute right-[10px] top-[10px] z-50 !h-[35px] !w-[35px] !min-w-[35px] !rounded-full !text-[#000] opacity-75"
               >
                 {isShowPassword === true ? (
-                  <IoIosEyeOff className="text-[35px]" />
+                  <IoIosEyeOff className="text-[35px] hover:text-primary" />
                 ) : (
-                  <IoIosEye className="text-[35px]" />
+                  <IoIosEye className="text-[35px] hover:text-primary" />
                 )}
               </Button>
             </div>
