@@ -1,8 +1,14 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { FaPlus } from "react-icons/fa6";
+import ProductsUploading from "../../Pages/Products/ProductsUploading";
 
 const DashBoardWelcome = () => {
+    const [dialogOpen, setDialogOpen] = React.useState(false);
+
+    const handleOpen = () => setDialogOpen(true);
+    const handleClose = () => setDialogOpen(false);
+
   return (
     <>
       <section>
@@ -18,7 +24,7 @@ const DashBoardWelcome = () => {
               once.
             </p>
             <br />
-            <Button className="btn-blue gap-3 !capitalize">
+            <Button onClick={handleOpen} className="btn-blue gap-3 !capitalize">
               <FaPlus />
               <p className="mb-0"> Add Product</p>
             </Button>
@@ -26,6 +32,10 @@ const DashBoardWelcome = () => {
           <img src="/shop-illustration.png" alt="" className="w-[250px]" />
         </div>
       </section>
+      {/* component  */}
+      <ProductsUploading isOpen={dialogOpen} onClose={handleClose} />
+
+      {/* component */}
     </>
   );
 };
