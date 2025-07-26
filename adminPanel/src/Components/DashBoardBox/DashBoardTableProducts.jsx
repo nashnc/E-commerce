@@ -13,6 +13,7 @@ import { BsEye } from "react-icons/bs";
 import { PiTrashDuotone } from "react-icons/pi";
 import Pagination from "@mui/material/Pagination";
 import { FaPlus } from "react-icons/fa6";
+import ProductsUploading from "../../Pages/Products/ProductsUploading";
 
 const DashBoardTableProducts = () => {
   const [openOrderProduct, setOpenOrderProduct] = useState(null);
@@ -28,6 +29,10 @@ const DashBoardTableProducts = () => {
   const handleChangeFilterValue = (event) => {
     setCategoryFilterValue(event.target.value);
   };
+  const [dialogOpen, setDialogOpen] = React.useState(false);
+
+  const handleOpen = () => setDialogOpen(true);
+  const handleClose = () => setDialogOpen(false);
 
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   const image = [
@@ -66,7 +71,10 @@ const DashBoardTableProducts = () => {
 
               <p>Export</p>
             </Button>
-            <Button className="btn-blue btn-sm gap-3 !capitalize">
+            <Button
+              onClick={handleOpen}
+              className="btn-blue btn-sm gap-3 !capitalize"
+            >
               <FaPlus />
               <p> Add Product</p>
             </Button>
@@ -213,6 +221,10 @@ const DashBoardTableProducts = () => {
           <Pagination count={10} />
         </div>
       </div>
+      {/* component  */}
+      <ProductsUploading isOpen={dialogOpen} onClose={handleClose} />
+
+      {/* component */}
     </>
   );
 };
