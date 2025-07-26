@@ -5,6 +5,7 @@ import { createContext, useState } from "react";
 import Navigations from "./Components/Navigations/Navigations";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
+import Products from "./Pages/Products/Products";
 
 export const MyContext = createContext();
 
@@ -12,44 +13,36 @@ function App() {
   const [sideBarIsOpen, setSideBarIsOpen] = useState(true);
   const [isLogin, setIsLogin] = useState(true);
 
+  const values = {
+    sideBarIsOpen,
+    setSideBarIsOpen,
+    isLogin,
+    setIsLogin,
+  };
+
   const router = createBrowserRouter([
     {
       path: "/",
-      exact: true,
-      element: (
-        <>
-          <Navigations />
-        </>
-      ),
+      element: <Navigations />,
     },
     {
       path: "/login",
-      exact: true,
-      element: (
-        <>
-          <Login />
-        </>
-      ),
+      element: <Login />,
     },
     {
       path: "/signup",
-      exact: true,
-      element: (
-        <>
-          <Signup />
-        </>
-      ),
+      element: <Signup />,
+    },
+    {
+      path: "/product",
+      element: <Products />,
     },
   ]);
 
-  const values = { sideBarIsOpen, setSideBarIsOpen, isLogin, setIsLogin };
-
   return (
-    <>
-      <MyContext.Provider value={values}>
-        <RouterProvider router={router} />
-      </MyContext.Provider>
-    </>
+    <MyContext.Provider value={values}>
+      <RouterProvider router={router} />
+    </MyContext.Provider>
   );
 }
 
