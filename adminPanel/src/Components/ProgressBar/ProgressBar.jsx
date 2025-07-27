@@ -5,7 +5,6 @@ import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
 
-// Custom styled LinearProgress
 const BorderLinearProgress = styled(LinearProgress, {
   shouldForwardProp: (prop) => prop !== "status",
 })(({ theme, status }) => {
