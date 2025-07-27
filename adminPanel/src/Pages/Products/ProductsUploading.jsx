@@ -5,7 +5,6 @@ import {
   Toolbar,
   IconButton,
   Typography,
-  Button,
   Slide,
 } from "@mui/material";
 import { IoClose } from "react-icons/io5";
@@ -29,9 +28,7 @@ const ProductsUploading = ({ isOpen, onClose }) => {
             <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
               Add Product
             </Typography>
-            {/* <Button autoFocus color="inherit" onClick={onClose}>
-              Save
-            </Button> */}
+          
             <IconButton
               edge="start"
               color="inherit"
