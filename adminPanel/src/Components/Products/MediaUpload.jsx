@@ -94,7 +94,7 @@ const MediaUpload = () => {
             onChange={handleFileChange}
           />
           <p className="text-center text-gray-600">
-            Drag & drop files here or{" "}
+            Drag & drop files here or
             <span className="text-[rgba(0,0,0,0.7)] underline">
               click to upload
             </span>
