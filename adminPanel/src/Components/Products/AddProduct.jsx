@@ -137,7 +137,7 @@ const AddProduct = () => {
                     name="productStock"
                     className="!h-[56px] w-[250px] min-w-[200px]"
                   />
-                </div>{" "}
+                </div>
                 <div className="">
                   <h4 className="text-[16px] font-[500]">Product Brand</h4>
 
@@ -149,7 +149,7 @@ const AddProduct = () => {
                     name="productBrand"
                     className="!h-[56px] w-[250px] min-w-[200px]"
                   />
-                </div>{" "}
+                </div>
                 <div className="">
                   <h4 className="text-[16px] font-[500]">Product Brand</h4>
 
@@ -161,7 +161,7 @@ const AddProduct = () => {
                     name="productDiscount"
                     className="!h-[56px] w-[250px] min-w-[200px]"
                   />
-                </div>{" "}
+                </div>
                 <div className="">
                   <h4 className="text-[16px] font-[500]">Product Rams</h4>
                   <Select
@@ -191,7 +191,7 @@ const AddProduct = () => {
                     name="productDiscount"
                     className="!h-[56px] w-[250px] min-w-[200px]"
                   />
-                </div>{" "}
+                </div>
                 <div className="">
                   <h4 className="text-[16px] font-[500]">Product Size</h4>
                   <Select
