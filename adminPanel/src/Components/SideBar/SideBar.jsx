@@ -17,7 +17,7 @@ const SideBar = () => {
   const context = useContext(MyContext);
 
   const [openMenu, setOpenMenu] = useState(null);
-  
+
   const showMenus = (index) => {
     if (context.sideBarIsOpen) {
       if (openMenu === index) {
@@ -77,7 +77,11 @@ const SideBar = () => {
             <Collapse isOpened={openMenu === 0}>
               <ul className="w-full">
                 <li className="w-full">
-                  <Button className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]">
+                  <Button
+                    component={Link}
+                    to="/homeBanners/list"
+                    className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]"
+                  >
                     <div className="flex h-[12px] w-[12px] items-center justify-center rounded-full bg-[rgba(0,0,0,0.1)]">
                       <div className="block h-[6px] w-[6px] rounded-full bg-[rgba(0,0,0,0.3)]"></div>
                     </div>
@@ -98,7 +102,7 @@ const SideBar = () => {
           <li>
             <Button
               component={Link}
-              to="/users"
+              to="/users/list"
               className="flex !w-full !justify-start gap-3 !py-2 !text-[14px] !font-[600] !capitalize !text-[rgba(0,0,0,0.8)] hover:!bg-[#ccc]"
             >
               <LuUsersRound className="!min-w-[40px] items-center !text-[20px] !font-[500]" />
@@ -123,7 +127,7 @@ const SideBar = () => {
                 <li className="w-full">
                   <Button
                     component={Link}
-                    to="/product"
+                    to="/products"
                     className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]"
                   >
                     <div className="flex h-[12px] w-[12px] items-center justify-center rounded-full bg-[rgba(0,0,0,0.1)]">
@@ -164,7 +168,7 @@ const SideBar = () => {
                 <li className="w-full">
                   <Button
                     component={Link}
-                    to="/category"
+                    to="/category/list"
                     className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]"
                   >
                     <div className="flex h-[12px] w-[12px] items-center justify-center rounded-full bg-[rgba(0,0,0,0.1)]">
@@ -174,11 +178,7 @@ const SideBar = () => {
                   </Button>
                 </li>
                 <li className="w-full">
-                  <Button
-                    component={Link}
-                    to="/category/new"
-                    className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]"
-                  >
+                  <Button className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]">
                     <div className="flex h-[12px] w-[12px] items-center justify-center rounded-full bg-[rgba(0,0,0,0.1)]">
                       <div className="block h-[6px] w-[6px] rounded-full bg-[rgba(0,0,0,0.3)]"></div>
                     </div>
@@ -188,7 +188,7 @@ const SideBar = () => {
                 <li className="w-full">
                   <Button
                     component={Link}
-                    to="/subcategory"
+                    to="/subcategory/list"
                     className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]"
                   >
                     <div className="flex h-[12px] w-[12px] items-center justify-center rounded-full bg-[rgba(0,0,0,0.1)]">
@@ -198,11 +198,7 @@ const SideBar = () => {
                   </Button>
                 </li>
                 <li className="w-full">
-                  <Button
-                    component={Link}
-                    to="/subcategory/new"
-                    className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]"
-                  >
+                  <Button className="!w-full !justify-start gap-3 !pl-9 !text-[14px] !font-[500] !capitalize !text-[rgba(0,0,0,0.7)]">
                     <div className="flex h-[12px] w-[12px] items-center justify-center rounded-full bg-[rgba(0,0,0,0.1)]">
                       <div className="block h-[6px] w-[6px] rounded-full bg-[rgba(0,0,0,0.3)]"></div>
                     </div>
@@ -213,7 +209,7 @@ const SideBar = () => {
             </Collapse>
           </li>
           <li>
-            <Button className="flex !w-full !justify-start gap-3 !py-2 !text-[14px] !font-[600] !capitalize !text-[rgba(0,0,0,0.8)] hover:!bg-[#ccc]">
+            <Button component={Link} to='/orders'   className="flex !w-full !justify-start gap-3 !py-2 !text-[14px] !font-[600] !capitalize !text-[rgba(0,0,0,0.8)] hover:!bg-[#ccc]">
               <GiBoxTrap className="!min-w-[40px] items-center !text-[20px] !font-[500]" />
               <p>Orders</p>
             </Button>
