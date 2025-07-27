@@ -11,7 +11,6 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 import { BsEye } from "react-icons/bs";
 import { PiTrashDuotone } from "react-icons/pi";
 import Pagination from "@mui/material/Pagination";
-import { FaPlus } from "react-icons/fa6";
 import SearchBox from "../SearchBox/SearchBox";
 
 const ProductsHomeProductsTable = () => {
