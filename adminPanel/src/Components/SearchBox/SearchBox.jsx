@@ -12,6 +12,7 @@ const SearchBox = () => {
           variant="outlined"
           className="!h-[40px] w-full"
           name="search"
+          
         />
       </div>
     </>
