@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Header from "../Header/Header";
 import SideBar from "../SideBar/Sidebar";
 import Dashboard from "../../Pages/DashBoard/Dashboard";
-import { MyContext } from "../../App"; // Update this line
+import { MyContext } from "../../App"; 
 const Navigations = () => {
   const context = useContext(MyContext);
   return (
