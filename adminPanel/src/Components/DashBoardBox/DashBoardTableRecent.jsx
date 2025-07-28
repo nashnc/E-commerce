@@ -141,7 +141,7 @@ const DashBoardTableRecent = () => {
                 </td>
                 <td className="border-b border-slate-200 p-4">
                   <p className="block text-[rgba(0,0,0,0.7)]">
-                    <Badge status="pending" />
+                    <Badge titles="" status="pending" />
                   </p>
                 </td>
                 <td className="border-b border-slate-200 p-4">
@@ -252,7 +252,6 @@ const DashBoardTableRecent = () => {
           </div>
         </div>
       </div>
-      
     </>
   );
 };
