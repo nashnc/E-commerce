@@ -5,17 +5,15 @@ import Badge from "@mui/material/Badge";
 import { FaRegBell } from "react-icons/fa";
 import "./Header.css";
 import HeaderAccountMenu from "./HeaderAccountMenu";
-import { MyContext } from "../../App"; // Update this line
+import { MyContext } from "../../App"; 
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const context = useContext(MyContext);
 
-  // Fix the typo in the onClick handler
   const handleSidebarToggle = () =>
     context.setSideBarIsOpen(!context.sideBarIsOpen);
 
-  // ... rest of the code
 
   return (
     <>
