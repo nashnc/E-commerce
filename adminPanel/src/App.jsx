@@ -11,16 +11,28 @@ import CategoryList from "./Pages/Category/CategoryList";
 import SubCategoryList from "./Pages/Category/SubCategoryList";
 import Users from "./Pages/Users/Users";
 import Orders from "./Pages/Orders/Orders";
+import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
+import Verification from "./Pages/Verification/Verification";
+import toast, { Toaster } from "react-hot-toast";
 
 export const MyContext = createContext();
 
 function App() {
   const [sideBarIsOpen, setSideBarIsOpen] = useState(true);
   const [isLogin, setIsLogin] = useState(true);
+  const openAlertBox = (status, msg) => {
+    if (status === "success") {
+      toast.success(msg);
+    }
+    if (status === "error") {
+      toast.error(msg);
+    }
+  };
 
   const values = {
     sideBarIsOpen,
     setSideBarIsOpen,
+    openAlertBox,
     isLogin,
     setIsLogin,
   };
@@ -32,11 +44,19 @@ function App() {
     },
     {
       path: "/login",
-      element: <Login />,
+      element: <Login type />,
     },
     {
       path: "/signup",
       element: <Signup />,
+    },
+    {
+      path: "/forgot",
+      element: <ForgotPassword />,
+    },
+    {
+      path: "/verify",
+      element: <Verification />,
     },
     {
       path: "/products",
@@ -71,6 +91,7 @@ function App() {
   return (
     <MyContext.Provider value={values}>
       <RouterProvider router={router} />
+      <Toaster />
     </MyContext.Provider>
   );
 }
