@@ -21,6 +21,12 @@ const messages = {
       benefits and stay up-to-date.
     </>
   ),
+  forgot: (
+    <>
+      Having trouble to sign in?
+      <br /> Reset your password.
+    </>
+  ),
 };
 
 const LoginBox = ({ show }) => {
@@ -39,7 +45,7 @@ const LoginBox = ({ show }) => {
   };
 
   return (
-    <div className="loginBox card mx-auto mt-5 h-[300px] w-full">
+    <div className="loginBox card mx-auto mt-5 h-[250px] w-full">
       <div className="flex items-center justify-center">
         <img
           src={image}
@@ -51,22 +57,25 @@ const LoginBox = ({ show }) => {
       <h1 className="mt-4 text-center text-[35px] font-[800]">
         {messages[show]}
       </h1>
-
-      <div className="mt-4 flex items-end justify-center gap-3">
-        {loginWith.map((method, index) => (
-          <LoadingButton
-            key={method.text}
-            className="btn-dark-border !capitalize"
-            startIcon={method.icon}
-            onClick={() => handleLogin(index)}
-            loading={loadingIndex === index}
-            loadingPosition="start"
-            variant="outlined"
-          >
-            Continue with {method.text}
-          </LoadingButton>
-        ))}
-      </div>
+      {show !== "forgot" ? (
+        <div className="mt-4 flex items-end justify-center gap-3">
+          {loginWith.map((method, index) => (
+            <LoadingButton
+              key={method.text}
+              className="btn-dark-border !capitalize"
+              startIcon={method.icon}
+              onClick={() => handleLogin(index)}
+              loading={loadingIndex === index}
+              loadingPosition="start"
+              variant="outlined"
+            >
+              Continue with {method.text}
+            </LoadingButton>
+          ))}
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
