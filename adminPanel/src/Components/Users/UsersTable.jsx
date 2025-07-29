@@ -14,7 +14,6 @@ const UsersTable = () => {
       setOpenOrderProduct(index);
     }
   };
- 
 
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   const image =
@@ -60,7 +59,11 @@ const UsersTable = () => {
                       User Mobile
                     </p>
                   </th>
-
+                  <th className="border-b border-primary bg-[#f1f1f1] p-4">
+                    <p className="block bg-[#f1f1f1] font-normal leading-none text-black">
+                      Created On
+                    </p>
+                  </th>
                 </tr>
               </thead>
               <tbody className="text-[14px]">
@@ -91,17 +94,15 @@ const UsersTable = () => {
                   </td>
 
                   <td className="border-b border-slate-200 p-4">
-                    <p className="block text-[rgba(0,0,0,0.7)]">
-                      <div className="">
-                        <p className="mt-2 flex flex-col items-start gap-2">
-                          <span className="oldPrice text-[14px] font-[400] text-[rgba(0,0,0,0.5)]">
-                            +91-7845129063
-                          </span>
-                        </p>
-                      </div>
+                    <p className="mt-2 flex flex-col items-start gap-2">
+                      <span className="oldPrice text-[14px] font-[400] text-[rgba(0,0,0,0.5)]">
+                        +91-7845129063
+                      </span>
                     </p>
                   </td>
-             
+                  <td className="border-b border-slate-200 p-4">
+                    <p className="block text-[rgba(0,0,0,0.7)]">28-07-2025</p>
+                  </td>
                 </tr>
               </tbody>
             </table>
